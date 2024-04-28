@@ -14,11 +14,32 @@
         <h1 id="b-page-header">Photography</h1>
     </header>
 
-
+<div id="works"></div>
+<!-- ----------------------- -->
     <script src="j5.js"></script>
     <script src="script.js"></script>
     <script>
         generateNavBar();
+        // -------INPUT ARTWORK HERE---------
+        let works = [
+            {
+                photo: 'photo1.jpg',
+                date: '2022-01-01',
+                title: 'Title 1'
+            },
+            {
+                photo: 'photo2.jpg',
+                date: '2022-01-02',
+                title: 'Title 2'
+            },
+            {
+                photo: 'photo2.jpg',
+                date: '2022-01-02',
+                title: 'Title 2'
+            }
+        ];
+
+        populate();
     </script>
 </body>
 

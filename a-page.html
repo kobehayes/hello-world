@@ -16,11 +16,36 @@
 
     <div id="works"></div>
 
-
+<!-- --------------- -->
     <script src="j5.js"></script>
     <script src="script.js"></script>
     <script>
+
+
+        // -------INPUT ARTWORK HERE---------
+        let subTitle1 = 'Title 1';
+        let subTitle2 = 'Title 2';
+        let subTitle3 = 'Title 3';
+
+        let works = [
+            {
+                photo: 'photo1.jpg',
+                date: '2022-01-01',
+                title: subTitle1
+            },
+            {
+                photo: 'photo2.jpg',
+                date: '2022-01-02',
+                title: subTitle2
+            },
+            {
+                photo: 'photo3.jpg',
+                date: '2022-01-02',
+                title: subTitle3
+            }
+        ];
         generateNavBar();
+        populate();
     </script>
 </body>
 
