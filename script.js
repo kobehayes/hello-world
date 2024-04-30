@@ -31,6 +31,7 @@ let navItems = [
 
 //                                  pages call this
 function generateNavBar() {
+
     let navBar = document.getElementById('navbar');
 
     for (let item of navItems) {
