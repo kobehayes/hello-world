@@ -24,3 +24,33 @@ p {
     margin: 0 auto;
     padding: 20px;
 }
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  position: relative;
+  color: red;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  /* Or any width you prefer */
+  background-color: #975b5b;
+  /* Or any color you prefer */
+  color: #ffffff;
+  /* Or any color you prefer */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.nav-item:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+}

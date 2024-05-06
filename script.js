@@ -1,80 +1,60 @@
 
+//                                  pages call this
+function generateNavBar() {
 
-//-----------INPUT NAVBAR ELEMENTS HERE----
+    //-----------INPUT NAVBAR ELEMENTS HERE----
 let navItems = [
     {
-        text: 'Home', href: 'index.html', 
+        text: 'Kobe Hayes', href: 'index.html', 
     },
     {
-        text: 'Interactive', href: 'a-page.html', dropdown: [
-            { text: subTitle1, href: '#' },
-            { text: subTitle2, href: '#' },
-            { text: subTitle3, href: '#' },
+        text: 'Graphic Design', href: 'a-page/a-page.html', dropdown: [
+            { text: 'How Does Sound Work', href: '#' },
+            { text:'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
         ]
     },
     {
-        text: 'Photography', href: 'b-page.html', dropdown: [
-            { text: subTitle1, href: '#' },
-            { text: subTitle2, href: '#' },
-            { text: subTitle3, href: '#' },
+        text: 'Video', href: 'b-page/b-page.html', dropdown: [
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
         ]
     },
     {
-        text: 'Paintings', href: 'c-page.html', dropdown: [
-            { text: subTitle1, href: '#' },
-            { text: subTitle2, href: '#' },
-            { text: subTitle3, href: '#' },
+        text: 'Audio', href: 'c-page/c-page.html', dropdown: [
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
         ]
     },
 
 ];
 
-//                                  pages call this
-function generateNavBar() {
-
     let navBar = document.getElementById('navbar');
 
-    for (let item of navItems) {
+for (let item of navItems) {
+    let a = document.createElement('a');
+    a.textContent = item.text;
+    a.href = item.href;
 
-        let a = document.createElement('a');
-        a.textContent = item.text;
-        a.href = item.href;
-        navBar.appendChild(a);
+    let div = document.createElement('div');
+    div.className = 'dropdown';
 
-        let div = document.createElement('div');
-        div.className = 'dropdown';
-
-        let dropdownContent = document.createElement('div');
-        dropdownContent.className = 'dropdown-content';
-
-        for (let work of works) {
-            let a = document.createElement('a');
-            a.textContent = work.title;
-
-            dropdownContent.appendChild(a);
+    if (item.dropdown) { // Check if the dropdown property exists
+        for (let dropdownItem of item.dropdown) {
+            // Access properties of the dropdown item
+            let dropdownA = document.createElement('a');
+            dropdownA.textContent = dropdownItem.text;
+            dropdownA.href = dropdownItem.href;
+            div.appendChild(dropdownA);
         }
-
-        div.appendChild(dropdownContent);
-        navBar.appendChild(div);
     }
-}
 
-function populate() {
-    //                      populating pages with artwork
-
-
-let worksDiv = document.getElementById('works');
-
-for (let work of works) {
-    let worksHTML = `
-                <div>
-                    <img src="${work.photo}" alt="${work.title}">
-                     <p>${work.date}</p>
-                    <h2>${work.title}</h2>
-                   
-                </div>
-            `;
-
-    worksDiv.innerHTML += worksHTML;
+    let navItem = document.createElement('div');
+    navItem.className = 'nav-item';
+    navItem.appendChild(a);
+    navItem.appendChild(div);
+    navBar.appendChild(navItem);
 }
 }
