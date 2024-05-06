@@ -8,21 +8,35 @@ let navItems = [
         text: 'Kobe Hayes', href: 'index.html', 
     },
     {
-        text: 'Graphic Design', href: 'a-page/a-page.html', dropdown: [
+        text: 'Graphic Design', href: 'graphic-design.html', dropdown: [
             { text: 'How Does Sound Work', href: '#' },
             { text:'asdf', href: '#' },
             { text: 'asdf', href: '#' },
         ]
     },
     {
-        text: 'Video', href: 'b-page/b-page.html', dropdown: [
+        text: 'Video', href: 'video.html', dropdown: [
             { text: 'asdf', href: '#' },
             { text: 'asdf', href: '#' },
             { text: 'asdf', href: '#' },
         ]
     },
     {
-        text: 'Audio', href: 'c-page/c-page.html', dropdown: [
+        text: 'Audio', href: 'audio.html', dropdown: [
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
+        ]
+    },
+     {
+        text: 'Photography', href: 'photography.html', dropdown: [
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
+            { text: 'asdf', href: '#' },
+        ]
+    },
+     {
+        text: 'Typeface', href: 'typeface.html', dropdown: [
             { text: 'asdf', href: '#' },
             { text: 'asdf', href: '#' },
             { text: 'asdf', href: '#' },
