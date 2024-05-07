@@ -45,7 +45,7 @@ let navItems = [
 
 ];
 
-    let navBar = document.getElementById('navbar');
+let navBar = document.getElementById('navbar');
 
 for (let item of navItems) {
     let a = document.createElement('a');
@@ -71,4 +71,11 @@ for (let item of navItems) {
     navItem.appendChild(div);
     navBar.appendChild(navItem);
 }
+
+//---------resize images dynamically
+window.addEventListener('resize', () => {
+  let img = document.querySelector('img');
+  img.width = window.innerWidth / 1.5; // half of the window's width
+//   img.height = img.width * (img.naturalHeight / img.naturalWidth); // maintain aspect ratio
+});
 }
