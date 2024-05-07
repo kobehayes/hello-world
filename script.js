@@ -30,9 +30,9 @@ let navItems = [
     },
      {
         text: 'Photography', href: 'photography.html', dropdown: [
-            { text: 'asdf', href: '#' },
-            { text: 'asdf', href: '#' },
-            { text: 'asdf', href: '#' },
+            { text: '35mm Photography', href: '#' },
+            { text: 'Digital Photography', href: 'photography.html#digital-photos' },
+            
         ]
     },
      {
