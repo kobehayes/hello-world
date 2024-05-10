@@ -47,6 +47,43 @@
 <script src="p5.js"></script>
 <script src="script.js"></script>
 <script>
+    let bwImages = [
+            'photography/bw1.jpeg',
+            'photography/bw2.jpeg',
+            'photography/bw3.jpeg',
+            'photography/bw4.jpeg',
+            'photography/bw5.jpeg',
+            'photography/bw6.jpeg',
+            'photography/bw7.jpeg',
+            'photography/bw8.jpeg'
+        ];
+        let digitalImages = [
+            'photography/pho1.jpeg',
+            'photography/pho2.jpeg',
+            'photography/pho3.jpeg',
+            'photography/pho4.jpeg',
+            'photography/pho5.jpeg',
+            'photography/pho6.jpeg',
+            'photography/pho7.jpeg',
+            'photography/pho8.jpeg'
+        ];
+        let bwIndex = 0;
+        let digitalIndex = 0;
+
+        function changeBwImage() {
+            let img = document.querySelector('#bw-photos');
+            img.src = bwImages[bwIndex];
+            bwIndex = (bwIndex + 1) % bwImages.length;
+        }
+
+        function changeDigitalImage() {
+            let img = document.querySelector('#digital-photos');
+            img.src = digitalImages[digitalIndex];
+            digitalIndex = (digitalIndex + 1) % digitalImages.length;
+        }
+
+        setInterval(changeBwImage, 3000);
+        setInterval(changeDigitalImage, 3000);
     generateNavBar();
 
 </script>

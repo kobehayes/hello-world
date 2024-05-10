@@ -17,34 +17,56 @@
   <title>KOBE HAYES</title>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.js"></script>
   <style>
-    .main {
-      
+
+    body{
+      overflow:hidden;
+      height: 100vh;
+
     }
-      /* width: max-content; */
+    .main {
+      padding-top: 80px;
+      margin: 0;
+    }
     
   
       #home-top {
-        margin: 0;
+        margin: 0 0.4em 0 1em;
         position: relative; 
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: baseline;
       }
+        #home-bottom {
+        margin: 0.75em 1em 0 1em;
+        height:10vh;
+        position: relative; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        font-weight: 100;
+        font-style:italic;
+        font-size: 23px;
+        
+    
+      }
   
   
       #image-cont {
+        box-sizing: border-box;
+        padding: 0;
         width: 100%;
-        height: 500px;
+        height: 70vh;
         /* Adjust this to control the visible portion of the image */
-        overflow: hidden;
+       
         display: block;
   
       }
   
       #image-cont img {
         width: 100%;
-        height: auto;
+        height: 70vh;
         display: block;
         object-fit: cover;
       }
@@ -64,16 +86,42 @@
       <h2>multimedia artist and graphic designer</h2>
   </div>
   
-  <div id="image-cont"><img src="photography/bw5.jpeg"></div>
-  
-  <h3>photography</h3>
-  <h4>2023</h4>
-  
+  <div id="image-cont">
+    <a id="carousel-link" href='#'>
+
+   <img id="carousel-image" src="#">
+   </a>
+  </div>
+ 
+  <div id="home-bottom">
+    Caption 0
+  </div>
     </section>
   
 <!-- <script src="homep5.js"></script> -->
 <script src="script.js"></script>
 <script>
+  let images = [
+      { src: 'photography/bw1.jpeg', caption: 'Caption 1', link: 'https://example.com/link1' },
+      { src: 'photography/bw2.jpeg', caption: 'Caption 2' },
+      { src: 'photography/pho3.jpeg', caption: 'Caption 3' }
+    ]; // Array of image objects
+    let currentIndex = 0; // Start at the first image
+
+    // Function to change the image and caption
+    function changeImage() {
+      let img = document.querySelector('#carousel-image');
+      let caption = document.querySelector('#home-bottom');
+      let link = document.querySelector('#carousel-link');
+
+      img.src = images[currentIndex].src;
+      link.href = images[currentIndex].link;
+      caption.textContent = images[currentIndex].caption;
+      currentIndex = (currentIndex + 1) % images.length; // Move to the next image, looping back to the first image if necessary
+    }
+
+    // Change the image and caption every 3 seconds
+    setInterval(changeImage, 7000);
 
   generateNavBar();
 

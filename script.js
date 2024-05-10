@@ -79,3 +79,6 @@ window.addEventListener('resize', () => {
 //   img.height = img.width * (img.naturalHeight / img.naturalWidth); // maintain aspect ratio
 });
 }
+
+
+

@@ -12,20 +12,26 @@ font-family: "forma-djr-display", sans-serif;
   
     
 .main {
-
     position: relative;
+    /* left and right margins */
 margin: 0 1% 0 1%;
 display:block;
 padding-top:100px;
 
+img {
 
+    width: 40%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
  
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: bold;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.2em;
   margin-top:0;
 }
 h1 {
@@ -41,6 +47,10 @@ h1 {
   to {
     transform: translateX(0);
   }
+}
+
+h2{
+  font-weight:200;
 }
 
 p {
@@ -80,8 +90,8 @@ header{
       z-index: 5;
       width: 100%;
       background-color: black;
-      border-style:solid;
-      border-color:red;
+      border-bottom: solid white;
+      border-width:1px;
       
 }
 
@@ -102,20 +112,18 @@ header{
     border-radius: 17px;
     font-size: 18px;
 }
-        /* .nav-item {
-          position: relative;
-          color: red;
-          font-size: 22px; */
+
+/* actual navbar labels */
+.nav-item:hover {
+  font-weight:bold;
+}
+
 
 .nav-item:hover .dropdown {
   display: flex;
   flex-direction: column;
+  font-weight:bold;
   
 }
-img {
 
-  width: 40%;
-  height: auto;
-  display: block;
-  margin: auto;
-}
+
