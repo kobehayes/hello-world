@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Fadriar';
+  src: url('font-fadriar.woff2') format('woff2');
+  font-family: 'Engravers';
+    src: url('font-engravers-trace.woff2') format('woff2');
+}
+
 body {
 font-family: "forma-djr-display", sans-serif;
   /* font-weight: 500; */
@@ -6,8 +13,6 @@ font-family: "forma-djr-display", sans-serif;
     color: white;
     padding: 0;
     
- 
-
   }
   
     
@@ -126,4 +131,24 @@ header{
   
 }
 
+/* photography carousels */
+#bw-carousel, #digital-carousel {
+  display: flex;
+  align-items: center;
+    justify-content: center;
+      height: 400px;
+}
 
+#bw-carousel button, #digital-carousel button {
+  flex: 1;
+  height: 50px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+#bw-carousel img, #digital-carousel img {
+  flex: 8;
+    max-height: 100%;
+      object-fit: contain;
+}
