@@ -9,6 +9,8 @@
         Photography
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 
@@ -21,22 +23,20 @@
     <h3>35mm Photography</h3>
     <div id="bw-carousel">
         <button class="photography-buttons" id="bw-prev">Prev</button>
-        <img id="bw-photos"
-            src="photography/bw1.jpeg">
-            <button class="photography-buttons" id="bw-next">Next</button>
-        </div>
-        
+        <img id="bw-photos" src="photography/bw1.jpeg">
+        <button class="photography-buttons" id="bw-next">Next</button>
+    </div>
+
     </div>
 
     <h3>Digital Photography</h3>
-        <div class="photography-buttons" id="digital-carousel">
-            <button class="photography-buttons"  id="digital-prev">Prev</button>
+    <div class="photography-buttons" id="digital-carousel">
+        <button class="photography-buttons" id="digital-prev">Prev</button>
 
-        <img id="digital-photos"
-            src="photography/pho1.jpeg">
-            <button class="photography-buttons"  id="digital-next">Next</button>
-        </div>
-     
+        <img id="digital-photos" src="photography/pho1.jpeg">
+        <button class="photography-buttons" id="digital-next">Next</button>
+    </div>
+
     </div>
 </section>
 <!-- ------------------- -->
@@ -44,67 +44,67 @@
 <script src="script.js"></script>
 <script>
     let bwImages = [
-            'photography/bw1.jpeg',
-            'photography/bw2.jpeg',
-            'photography/bw3.jpeg',
-            'photography/bw4.jpeg',
-            'photography/bw5.jpeg',
-            'photography/bw6.jpeg',
-            'photography/bw7.jpeg',
-            'photography/bw8.jpeg'
-        ];
-        let digitalImages = [
-            'photography/pho1.jpeg',
-            'photography/pho2.jpeg',
-            'photography/pho3.jpeg',
-            'photography/pho4.jpeg',
-            'photography/pho5.jpeg',
-            'photography/pho6.jpeg',
-            'photography/pho7.jpeg',
-            'photography/pho8.jpeg'
-        ];
-        let bwIndex = 0;
-        let digitalIndex = 0;
+        'photography/bw1.jpeg',
+        'photography/bw2.jpeg',
+        'photography/bw3.jpeg',
+        'photography/bw4.jpeg',
+        'photography/bw5.jpeg',
+        'photography/bw6.jpeg',
+        'photography/bw7.jpeg',
+        'photography/bw8.jpeg'
+    ];
+    let digitalImages = [
+        'photography/pho1.jpeg',
+        'photography/pho2.jpeg',
+        'photography/pho3.jpeg',
+        'photography/pho4.jpeg',
+        'photography/pho5.jpeg',
+        'photography/pho6.jpeg',
+        'photography/pho7.jpeg',
+        'photography/pho8.jpeg'
+    ];
+    let bwIndex = 0;
+    let digitalIndex = 0;
 
-        function changeBwImage() {
-                let img = document.querySelector('#bw-photos');
-                img.src = bwImages[bwIndex];
-            }
+    function changeBwImage() {
+        let img = document.querySelector('#bw-photos');
+        img.src = bwImages[bwIndex];
+    }
 
-            function changeDigitalImage() {
-                let img = document.querySelector('#digital-photos');
-                img.src = digitalImages[digitalIndex];
-            }
+    function changeDigitalImage() {
+        let img = document.querySelector('#digital-photos');
+        img.src = digitalImages[digitalIndex];
+    }
 
-            document.querySelector('#bw-prev').addEventListener('click', function () {
-                bwIndex = (bwIndex - 1 + bwImages.length) % bwImages.length;
-                changeBwImage();
-            });
+    document.querySelector('#bw-prev').addEventListener('click', function () {
+        bwIndex = (bwIndex - 1 + bwImages.length) % bwImages.length;
+        changeBwImage();
+    });
 
-            document.querySelector('#bw-next').addEventListener('click', function () {
-                bwIndex = (bwIndex + 1) % bwImages.length;
-                changeBwImage();
-            });
+    document.querySelector('#bw-next').addEventListener('click', function () {
+        bwIndex = (bwIndex + 1) % bwImages.length;
+        changeBwImage();
+    });
 
-            document.querySelector('#digital-prev').addEventListener('click', function () {
-                digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
-                changeDigitalImage();
-            });
+    document.querySelector('#digital-prev').addEventListener('click', function () {
+        digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
+        changeDigitalImage();
+    });
 
-            document.querySelector('#digital-next').addEventListener('click', function () {
-                digitalIndex = (digitalIndex + 1) % digitalImages.length;
-                changeDigitalImage();
-        });
+    document.querySelector('#digital-next').addEventListener('click', function () {
+        digitalIndex = (digitalIndex + 1) % digitalImages.length;
+        changeDigitalImage();
+    });
 
-        document.querySelector('#digital-prev').addEventListener('click', function() {
-            digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
-            changeDigitalImage();
-        });
+    document.querySelector('#digital-prev').addEventListener('click', function () {
+        digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
+        changeDigitalImage();
+    });
 
-        document.querySelector('#digital-next').addEventListener('click', function() {
-            digitalIndex = (digitalIndex + 1) % digitalImages.length;
-            changeDigitalImage();
-        });
+    document.querySelector('#digital-next').addEventListener('click', function () {
+        digitalIndex = (digitalIndex + 1) % digitalImages.length;
+        changeDigitalImage();
+    });
     generateNavBar();
 
 </script>
