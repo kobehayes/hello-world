@@ -22,9 +22,11 @@
     <h1 id="d-page-header">Photography</h1>
     <h3>35mm Photography</h3>
     <div id="bw-carousel">
-        <button class="photography-buttons" id="bw-prev">Prev</button>
+
+        <!-- <button class="photography-buttons" id="bw-prev">Prev</button> -->
         <img id="bw-photos" src="photography/bw1.jpeg">
-        <button class="photography-buttons" id="bw-next">Next</button>
+        <!-- <button class="photography-buttons" id="bw-next">Next</button> -->
+
     </div>
 
     </div>
@@ -66,25 +68,43 @@
     let bwIndex = 0;
     let digitalIndex = 0;
 
-    function changeBwImage() {
-        let img = document.querySelector('#bw-photos');
-        img.src = bwImages[bwIndex];
-    }
+    // jQuery(function ($) {
+    //     $.fn.hScroll = function (amount) {
+    //         amount = amount || 120;
+    //         $(this).bind("DOMMouseScroll mousewheel", function (event) {
+    //             var oEvent = event.originalEvent,
+    //                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
+    //                 position = $(this).scrollLeft();
+    //             position += direction > 0 ? -amount : amount;
+    //             $(this).scrollLeft(position);
+    //             event.preventDefault();
+    //         })
+    //     };
+    // });
 
-    function changeDigitalImage() {
-        let img = document.querySelector('#digital-photos');
-        img.src = digitalImages[digitalIndex];
-    }
+    // $(document).ready(function () {
+    //     $('#box').hScroll(60); // You can pass (optionally) scrolling amount
+    // });
 
-    document.querySelector('#bw-prev').addEventListener('click', function () {
-        bwIndex = (bwIndex - 1 + bwImages.length) % bwImages.length;
-        changeBwImage();
-    });
+    // function changeBwImage() {
+    //     let img = document.querySelector('#bw-photos');
+    //     img.src = bwImages[bwIndex];
+    // }
 
-    document.querySelector('#bw-next').addEventListener('click', function () {
-        bwIndex = (bwIndex + 1) % bwImages.length;
-        changeBwImage();
-    });
+    // function changeDigitalImage() {
+    //     let img = document.querySelector('#digital-photos');
+    //     img.src = digitalImages[digitalIndex];
+    // }
+
+    // document.querySelector('#bw-prev').addEventListener('click', function () {
+    //     bwIndex = (bwIndex - 1 + bwImages.length) % bwImages.length;
+    //     changeBwImage();
+    // });
+
+    // document.querySelector('#bw-next').addEventListener('click', function () {
+    //     bwIndex = (bwIndex + 1) % bwImages.length;
+    //     changeBwImage();
+    // });
 
     document.querySelector('#digital-prev').addEventListener('click', function () {
         digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
@@ -105,6 +125,15 @@
         digitalIndex = (digitalIndex + 1) % digitalImages.length;
         changeDigitalImage();
     });
+
+    // document.getElementById('bw-carousel').addEventListener('mouseover', function () {
+    //     this.style.overflowX = 'auto';
+    // });
+
+    // document.getElementById('bw-carousel').addEventListener('mouseout', function () {
+    //     this.style.overflowX = 'hidden';
+    // });
+
     generateNavBar();
 
 </script>

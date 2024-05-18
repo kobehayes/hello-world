@@ -81,5 +81,9 @@ function generateNavBar() {
     });
 }
 
-
+//---------animate h1 on scroll
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    document.getElementById('graphic-header').style.left = scrollPosition + 'px';
+});
 
