@@ -83,7 +83,10 @@ function generateNavBar() {
 
 //---------animate h1 on scroll
 window.addEventListener('scroll', function () {
-    var scrollPosition = window.scrollY;
-    document.getElementById('graphic-header').style.left = scrollPosition + 'px';
+    let scrollPosition = window.scrollY;
+    let headers = document.getElementsByClassName('scroll-header');
+    if (headers.length > 0) {
+        headers[0].style.left = scrollPosition + 'px';
+    }
 });
 

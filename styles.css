@@ -36,7 +36,7 @@ h1 {
   font-size: 80px;
   font-weight: bold;
   margin-bottom: 0.2em;
-  margin-top: 70vh;
+  margin-top: 0;
   font-style: italic;
   position: relative;
 }
@@ -55,6 +55,11 @@ h1 {
     transform: translateX(0);
   }
 } */
+
+.scroll-header {
+  position: relative;
+  margin-top: 70vh;
+}
 
 h2 {
   font-weight: 200;
