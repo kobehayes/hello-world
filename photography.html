@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mzx0vll.css">
     <title>
         Photography
     </title>
@@ -68,6 +69,25 @@
     let bwIndex = 0;
     let digitalIndex = 0;
 
+    window.onload = function () {
+        var bwCarousel = document.getElementById('bw-carousel');
+        var digitalCarousel = document.getElementById('digital-carousel');
+
+        for (var i = 0; i < bwImages.length; i++) {
+            var img = document.createElement('img');
+            img.src = bwImages[i];
+            img.classList.add('bw-photos');
+            bwCarousel.appendChild(img);
+        }
+
+        for (var i = 0; i < digitalImages.length; i++) {
+            var img = document.createElement('img');
+            img.src = digitalImages[i];
+            img.classList.add('digital-photos');
+            digitalCarousel.appendChild(img);
+        }
+    };
+
     // jQuery(function ($) {
     //     $.fn.hScroll = function (amount) {
     //         amount = amount || 120;
@@ -106,25 +126,25 @@
     //     changeBwImage();
     // });
 
-    document.querySelector('#digital-prev').addEventListener('click', function () {
-        digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
-        changeDigitalImage();
-    });
+    // document.querySelector('#digital-prev').addEventListener('click', function () {
+    //     digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
+    //     changeDigitalImage();
+    // });
 
-    document.querySelector('#digital-next').addEventListener('click', function () {
-        digitalIndex = (digitalIndex + 1) % digitalImages.length;
-        changeDigitalImage();
-    });
+    // document.querySelector('#digital-next').addEventListener('click', function () {
+    //     digitalIndex = (digitalIndex + 1) % digitalImages.length;
+    //     changeDigitalImage();
+    // });
 
-    document.querySelector('#digital-prev').addEventListener('click', function () {
-        digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
-        changeDigitalImage();
-    });
+    // document.querySelector('#digital-prev').addEventListener('click', function () {
+    //     digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
+    //     changeDigitalImage();
+    // });
 
-    document.querySelector('#digital-next').addEventListener('click', function () {
-        digitalIndex = (digitalIndex + 1) % digitalImages.length;
-        changeDigitalImage();
-    });
+    // document.querySelector('#digital-next').addEventListener('click', function () {
+    //     digitalIndex = (digitalIndex + 1) % digitalImages.length;
+    //     changeDigitalImage();
+    // });
 
     // document.getElementById('bw-carousel').addEventListener('mouseover', function () {
     //     this.style.overflowX = 'auto';
