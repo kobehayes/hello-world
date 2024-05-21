@@ -11,7 +11,6 @@
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 
@@ -24,9 +23,7 @@
     <h3>35mm Photography</h3>
     <div id="bw-carousel" class="photo-carousel-container">
 
-        <!-- <button class="photography-buttons" id="bw-prev">Prev</button> -->
         <img id="bw-photos" src="photography/bw1.jpeg">
-        <!-- <button class="photography-buttons" id="bw-next">Next</button> -->
 
     </div>
 
@@ -35,10 +32,8 @@
     <h3>Digital Photography</h3>
     <div class="photo-carousel-container" id="digital-carousel">
 
-        <!-- <button class="photography-buttons" id="digital-prev">Prev</button> -->
 
         <img id="digital-photos" src="photography/pho1.jpeg">
-        <!-- <button class="photography-buttons" id="digital-next">Next</button> -->
     </div>
 
     </div>
@@ -87,73 +82,21 @@
             img.classList.add('digital-photos');
             digitalCarousel.appendChild(img);
         }
+
+        bwCarousel.addEventListener('scroll', function () {
+            if (bwCarousel.scrollLeft + bwCarousel.offsetWidth >= bwCarousel.scrollWidth) {
+                var firstImg = bwCarousel.querySelector('.bw-photos');
+                bwCarousel.appendChild(firstImg);
+            }
+        });
+
+        digitalCarousel.addEventListener('scroll', function () {
+            if (digitalCarousel.scrollLeft + digitalCarousel.offsetWidth >= digitalCarousel.scrollWidth) {
+                var firstImg = digitalCarousel.querySelector('.digital-photos');
+                digitalCarousel.appendChild(firstImg);
+            }
+        });
     };
-
-    // jQuery(function ($) {
-    //     $.fn.hScroll = function (amount) {
-    //         amount = amount || 120;
-    //         $(this).bind("DOMMouseScroll mousewheel", function (event) {
-    //             var oEvent = event.originalEvent,
-    //                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta,
-    //                 position = $(this).scrollLeft();
-    //             position += direction > 0 ? -amount : amount;
-    //             $(this).scrollLeft(position);
-    //             event.preventDefault();
-    //         })
-    //     };
-    // });
-
-    // $(document).ready(function () {
-    //     $('#box').hScroll(60); // You can pass (optionally) scrolling amount
-    // });
-
-    // function changeBwImage() {
-    //     let img = document.querySelector('#bw-photos');
-    //     img.src = bwImages[bwIndex];
-    // }
-
-    // function changeDigitalImage() {
-    //     let img = document.querySelector('#digital-photos');
-    //     img.src = digitalImages[digitalIndex];
-    // }
-
-    // document.querySelector('#bw-prev').addEventListener('click', function () {
-    //     bwIndex = (bwIndex - 1 + bwImages.length) % bwImages.length;
-    //     changeBwImage();
-    // });
-
-    // document.querySelector('#bw-next').addEventListener('click', function () {
-    //     bwIndex = (bwIndex + 1) % bwImages.length;
-    //     changeBwImage();
-    // });
-
-    // document.querySelector('#digital-prev').addEventListener('click', function () {
-    //     digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
-    //     changeDigitalImage();
-    // });
-
-    // document.querySelector('#digital-next').addEventListener('click', function () {
-    //     digitalIndex = (digitalIndex + 1) % digitalImages.length;
-    //     changeDigitalImage();
-    // });
-
-    // document.querySelector('#digital-prev').addEventListener('click', function () {
-    //     digitalIndex = (digitalIndex - 1 + digitalImages.length) % digitalImages.length;
-    //     changeDigitalImage();
-    // });
-
-    // document.querySelector('#digital-next').addEventListener('click', function () {
-    //     digitalIndex = (digitalIndex + 1) % digitalImages.length;
-    //     changeDigitalImage();
-    // });
-
-    // document.getElementById('bw-carousel').addEventListener('mouseover', function () {
-    //     this.style.overflowX = 'auto';
-    // });
-
-    // document.getElementById('bw-carousel').addEventListener('mouseout', function () {
-    //     this.style.overflowX = 'hidden';
-    // });
 
     generateNavBar();
 

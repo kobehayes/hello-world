@@ -150,6 +150,7 @@ header {
   display: flex;
   overflow-x: scroll;
   white-space: nowrap;
+  height: 40vw;
 }
 
 #digital-carousel {
@@ -163,25 +164,16 @@ header {
 
 #bw-carousel img,
 #digital-carousel img {
+  border-color: white;
+  border-style: solid;
+  border-width: 20px;
   flex: 8;
   max-height: 70%;
 
 }
 
 
-/* #bw-carousel button,
-#digital-carousel button {
-  flex: 1;
-  height: 50px;
 
-
-  cursor: pointer;
-} */
-/* #bw-carousel {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-} */
 
 /* .photo-container {
   overflow-y: visible;
@@ -194,7 +186,7 @@ header {
     border-spacing: 5px;
 } */
 
-/* s */
+
 
 /* design page */
 .graphic-works {
