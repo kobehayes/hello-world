@@ -136,28 +136,10 @@ header {
 }
 
 /* photography carousels */
-
-#digital-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40vw;
-}
-
-#bw-carousel button,
-#digital-carousel button {
-  flex: 1;
-  height: 50px;
-
-
-  cursor: pointer;
-}
-
-#bw-carousel img,
-#digital-carousel img {
-  flex: 8;
-  max-height: 70%;
-
+.photo-carousel-container {
+  height: 300px;
+  /* Adjust this value to your needs */
+  overflow-y: auto;
 }
 
 #bw-carousel {
@@ -166,6 +148,31 @@ header {
   white-space: nowrap;
 }
 
+#digital-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vw;
+}
+
+
+
+#bw-carousel img,
+#digital-carousel img {
+  flex: 8;
+  max-height: 70%;
+
+}
+
+
+/* #bw-carousel button,
+#digital-carousel button {
+  flex: 1;
+  height: 50px;
+
+
+  cursor: pointer;
+} */
 /* #bw-carousel {
   display: flex;
   overflow-x: auto;
@@ -215,8 +222,9 @@ header {
 }
 
 .work-info .work-desc {
-  font-size: 1em;
-  max-width: 20%;
+  font-size: 2em;
+
+  max-width: 50%;
 }
 
 
