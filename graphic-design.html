@@ -21,9 +21,9 @@
 
         <!-- can anything be performance art -->
         <span class="graphic-works" id="perf-book">
-            <img id="book-front-cover" src="book-imgs/front cover vector.svg">
-            <div class="work-info">
 
+
+            <div class="work-info">
                 <h2 class="work-title">Can Anything Be Performance Art?
                 </h2>
                 <h3 class="work-date">2022</h3>
@@ -33,12 +33,15 @@
                         Anything Be Performance Art?</a> designed, typeset, and bound by moi
                 </p>
             </div>
+            <img id="book-front-cover" src="book-imgs/front cover vector.svg">
         </span>
 
         <!-- aux magazines -->
+        <!-- HTML -->
+
         <span class="graphic-works" id="aux">
 
-            <div class="work-info">
+            <div class="work-info" id="aux-work-info">
                 <h2 class="work-title">AUX Magazine
                 </h2>
                 <h3 class="work-date">2023, 2024</h3>
@@ -47,7 +50,22 @@
                     typeset
                     by moi </p>
             </div>
-
+            <div id="both-aux-carousels">
+                <div class="aux-carousels" id="aux1-carousel">
+                    <img id="carouselImg1" src="" alt="carousel image">
+                    <div class="carousel-controls">
+                        <button id="prevBtn1">&lt; ----</button>
+                        <button id="nextBtn1">----- &gt;</button>
+                    </div>
+                </div>
+                <div class="aux-carousels" id="aux2-carousel">
+                    <img id="carouselImg2" src="" alt="carousel image">
+                    <div class="carousel-controls">
+                        <button id="prevBtn2">&lt; ----</button>
+                        <button id="nextBtn2">----- &gt;</button>
+                    </div>
+                </div>
+            </div>
         </span>
 
         <!-- apollo interactive -->
@@ -76,6 +94,100 @@
     <script src="p5.js"></script>
     <script src="script.js"></script>
     <script>
+
+
+        let images1 = [
+
+            'aux-imgs/aux1-1.jpg',
+            'aux-imgs/aux1-2.jpg',
+            'aux-imgs/aux1-3.jpg',
+            'aux-imgs/aux1-4.jpg',
+            'aux-imgs/aux1-5.jpg',
+            'aux-imgs/aux1-6.jpg',
+            'aux-imgs/aux1-7.jpg',
+            'aux-imgs/aux1-8.jpg',
+            'aux-imgs/aux1-9.jpg',
+            'aux-imgs/aux1-10.jpg',
+            'aux-imgs/aux1-11.jpg'
+        ]
+
+        let images2 = [
+
+            'aux-imgs/aux2-1.jpg',
+            'aux-imgs/aux2-2.jpg',
+            'aux-imgs/aux2-3.jpg',
+            'aux-imgs/aux2-4.jpg',
+            'aux-imgs/aux2-5.jpg',
+            'aux-imgs/aux2-6.jpg',
+            'aux-imgs/aux2-7.jpg',
+            'aux-imgs/aux2-8.jpg',
+            'aux-imgs/aux2-9.jpg',
+            'aux-imgs/aux2-10.jpg',
+            'aux-imgs/aux2-12.jpg',
+            'aux-imgs/aux2-13.jpg'
+        ];
+
+        let currentImageIndex1 = 0;
+        let imgElement1 = document.getElementById('carouselImg1');
+
+        let currentImageIndex2 = 0;
+        let imgElement2 = document.getElementById('carouselImg2');
+
+        function updateImage1() {
+            imgElement1.src = images1[currentImageIndex1];
+        }
+
+        function updateImage2() {
+            imgElement2.src = images2[currentImageIndex2];
+        }
+
+        document.getElementById('prevBtn1').addEventListener('click', function () {
+            currentImageIndex1 = (currentImageIndex1 - 1 + images1.length) % images1.length;
+            updateImage1();
+        });
+
+        document.getElementById('nextBtn1').addEventListener('click', function () {
+            currentImageIndex1 = (currentImageIndex1 + 1) % images1.length;
+            updateImage1();
+        });
+
+        document.getElementById('prevBtn2').addEventListener('click', function () {
+            currentImageIndex2 = (currentImageIndex2 - 1 + images2.length) % images2.length;
+            updateImage2();
+        });
+
+        document.getElementById('nextBtn2').addEventListener('click', function () {
+            currentImageIndex2 = (currentImageIndex2 + 1) % images2.length;
+            updateImage2();
+        });
+
+        // Initial image load
+        updateImage1();
+        updateImage2();
+
+        // JavaScript
+        // document.addEventListener('DOMContentLoaded', (event) => {
+        //     let modal = document.getElementById('myModal');
+        //     let modalImg = document.getElementById('img01');
+        //     let imgElement1 = document.getElementById('carouselImg1');
+        //     let imgElement2 = document.getElementById('carouselImg2');
+
+        //     imgElement1.addEventListener('click', function () {
+        //         modal.style.display = "block";
+        //         modalImg.src = this.src;
+        //     });
+
+        //     imgElement2.addEventListener('click', function () {
+        //         modal.style.display = "block";
+        //         modalImg.src = this.src;
+        //     });
+
+        //     let span = document.getElementsByClassName('close')[0];
+
+        //     span.onclick = function () {
+        //         modal.style.display = "none";
+        //     }
+        // });
         generateNavBar();
 
     </script>

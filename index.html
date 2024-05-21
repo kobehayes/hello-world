@@ -14,94 +14,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/mzx0vll.css">
+  <link rel="shortcut icon" type="image/x-icon" href="./Images/favicon.ico?">
   <title>KOBE HAYES</title>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.3/lib/p5.js"></script>
   <style>
-
-    body{
-      overflow:hidden;
+    body {
+      overflow: hidden;
       height: 100vh;
 
     }
+
     .main {
       padding-top: 80px;
       margin: 0;
     }
-    
-  
-      #home-top {
-        margin: 0 0.4em 0 1em;
-        position: relative; 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-      }
-        #home-bottom {
-        margin: 0.75em 1em 0 1em;
-        height:10vh;
-        position: relative; 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
-        font-weight: 100;
-        font-style:italic;
-        font-size: 23px;
-        
-    
-      }
-  
-  
-      #image-cont {
-        box-sizing: border-box;
-        padding: 0;
-        width: 100%;
-        height: 70vh;
-        /* Adjust this to control the visible portion of the image */
-       
-        display: block;
-  
-      }
-  
-      #image-cont img {
-        width: 100%;
-        height: 70vh;
-        display: block;
-        object-fit: cover;
-      }
-    
+
+
+    #home-top {
+      margin: 0 0.4em 0 1em;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    #home-bottom {
+      margin: 0.75em 1em 0 1em;
+      height: 10vh;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 100;
+      font-style: italic;
+      font-size: 23px;
+
+
+    }
+
+
+    #image-cont {
+      box-sizing: border-box;
+      padding: 0;
+      width: 100%;
+      height: 70vh;
+      /* Adjust this to control the visible portion of the image */
+
+      display: block;
+
+    }
+
+    #image-cont img {
+      width: 100%;
+      height: 70vh;
+      display: block;
+      object-fit: cover;
+    }
   </style>
 </head>
 
 <body>
   <header>
     <nav id="navbar"></nav>
-    
+
   </header>
-  
+
   <section class="main">
     <div id="home-top">
       <h1>Kobe Hayes</h1>
       <h2>multimedia artist and graphic designer</h2>
-  </div>
-  
-  <div id="image-cont">
-    <a id="carousel-link" href='#'>
+    </div>
 
-   <img id="carousel-image" src="#">
-   </a>
-  </div>
- 
-  <div id="home-bottom">
-    Caption 0
-  </div>
-    </section>
-  
-<!-- <script src="homep5.js"></script> -->
-<script src="script.js"></script>
-<script>
-  let images = [
+    <div id="image-cont">
+      <a id="carousel-link" href='#'>
+
+        <img id="carousel-image" src="#">
+      </a>
+    </div>
+
+    <div id="home-bottom">
+      Caption 0
+    </div>
+  </section>
+
+  <!-- <script src="homep5.js"></script> -->
+  <script src="script.js"></script>
+  <script>
+    let images = [
       { src: 'photography/bw1.jpeg', caption: 'Caption 1', link: 'https://example.com/link1' },
       { src: 'photography/bw2.jpeg', caption: 'Caption 2' },
       { src: 'photography/pho3.jpeg', caption: 'Caption 3' }
@@ -123,9 +124,10 @@
     // Change the image and caption every 3 seconds
     setInterval(changeImage, 7000);
 
-  generateNavBar();
+    generateNavBar();
 
-</script>
+  </script>
 
 </body>
+
 </html>

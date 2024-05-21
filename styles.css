@@ -148,8 +148,8 @@ header {
 #digital-carousel button {
   flex: 1;
   height: 50px;
-  background-color: #f0f0f0;
-  border: none;
+
+
   cursor: pointer;
 }
 
@@ -188,36 +188,38 @@ header {
 /* design page */
 .graphic-works {
   display: flex;
+  flex-direction: column;
   border-style: solid;
   border-width: 1px;
   border-color: orange;
   padding: 5%;
 }
 
+
 .work-info {
-  display: block;
+  display: flex;
+  align-items: flex-start;
 }
 
 .work-info .work-title {
   font-size: 7.5vw;
   margin-top: 0;
-  margin-bottom: 0;
-  /* adjust this value to your liking */
 
+  width: 70%;
 }
 
 .work-info .work-date {
   font-size: 3vw;
   margin-top: 2px;
-}
-
-work-info .work-desc {
-  font-size: 1em;
-}
-
-.work-date {
   font-style: italic;
 }
+
+.work-info .work-desc {
+  font-size: 1em;
+  max-width: 20%;
+}
+
+
 
 #book-front-cover {
   margin-right: 50px;
@@ -226,4 +228,55 @@ work-info .work-desc {
   object-fit: contain;
 }
 
-/* photography sarousels------- */
+/* aux carousels------- */
+
+/* CSS */
+#both-aux-carousels {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+/* .aux-carousels {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  /* Optional: Adds some space between the carousels */
+
+
+.aux-carousels img {
+  height: 80vh;
+  width: auto;
+  object-fit: contain;
+  margin: 20px;
+}
+
+/* CSS */
+.aux-carousels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.carousel-controls button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80px;
+  height: 25px;
+  background-color: #000000;
+  color: white;
+  font-size: 24px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}

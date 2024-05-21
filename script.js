@@ -15,15 +15,15 @@ function generateNavBar() {
                 { text: 'Animal Farm', href: '#' },
             ]
         },
+        // {
+        //     text: 'Analog', href: 'analog.html', dropdown: [
+        //         { text: 'asdf', href: '#' },
+        //         { text: 'asdf', href: '#' },
+        //         { text: 'asdf', href: '#' },
+        //     ]
+        // },
         {
-            text: 'Video', href: 'video.html', dropdown: [
-                { text: 'asdf', href: '#' },
-                { text: 'asdf', href: '#' },
-                { text: 'asdf', href: '#' },
-            ]
-        },
-        {
-            text: 'Audio', href: 'audio.html', dropdown: [
+            text: 'Time-Based', href: 'time-based.html', dropdown: [
                 { text: 'asdf', href: '#' },
                 { text: 'asdf', href: '#' },
                 { text: 'asdf', href: '#' },
@@ -41,6 +41,13 @@ function generateNavBar() {
                 { text: 'Process', href: '#' },
                 { text: 'Sketches', href: '#' },
 
+            ]
+        },
+        {
+            text: 'About', href: 'about.html', dropdown: [
+                { text: 'asdf', href: '#' },
+                { text: 'asdf', href: '#' },
+                { text: 'asdf', href: '#' },
             ]
         },
 
