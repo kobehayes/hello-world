@@ -97,3 +97,24 @@ window.addEventListener('scroll', function () {
     }
 });
 
+function generateFooter(name, contactInfo) {
+    // Create a new footer element
+    let footer = document.createElement('footer');
+
+    // Set the inner HTML of the footer
+    footer.innerHTML = `
+        <div class="footer-content">
+            <p>Kobe Hayes</p>
+            <p>kobehayes1@gmail.com</p>
+            <p><a href="https://www.linkedin.com/in/kobehayes/">LinkedIn</a></p>
+
+<p><a href="https://www.instagram.com/k.be?igsh=MXRud2prZTJ0a3FldQ%3D%3D&utm_source=qr">Instagram</a></p>   
+        </div>
+    `;
+
+    // Append the footer to the body
+    document.body.appendChild(footer);
+}
+
+// Call the function with the name and contact info
+generateFooter();

@@ -41,22 +41,26 @@ h1 {
   position: relative;
 }
 
-/* h1 {
-  animation: slideIn 1s ease-in-out forwards;
-  transform: translateY(-100%);
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #363636;
+
+  padding: 10px;
+  padding-bottom: 25px;
+  margin-top: 30px;
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateX(-100%);
-  }
+footer p {
+  font-family: monospace;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+}
 
-  to {
-    transform: translateX(0);
-  }
-} */
-
-.scroll-header {
+footer .scroll-header {
   position: relative;
   margin-top: 70vh;
 }
