@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/mzx0vll.css">
+
     <title>
-        Photography
+        Kobe Hayes - PHOTOGRAPHY
     </title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 
@@ -19,8 +20,8 @@
 
 </header>
 <section class="main" id="all-photos">
-    <h1 id="photography-header">Photography</h1>
-    <h3>35mm Photography</h3>
+    <h1 id="photography-header">PHOTOGRAPHY</h1>
+    <h3>35mm photography</h3>
     <div id="bw-carousel" class="photo-carousel-container">
 
         <img id="bw-photos" src="photography/bw1.jpeg">
@@ -29,7 +30,7 @@
 
     </div>
 
-    <h3>Digital Photography</h3>
+    <h3>digital photography</h3>
     <div class="photo-carousel-container" id="digital-carousel">
 
 
@@ -43,7 +44,6 @@
 <script src="script.js"></script>
 <script>
     let bwImages = [
-        'photography/bw1.jpeg',
         'photography/bw2.jpeg',
         'photography/bw3.jpeg',
         'photography/bw4.jpeg',
@@ -53,7 +53,6 @@
         'photography/bw8.jpeg'
     ];
     let digitalImages = [
-        'photography/pho1.jpeg',
         'photography/pho2.jpeg',
         'photography/pho3.jpeg',
         'photography/pho4.jpeg',
@@ -83,20 +82,21 @@
             digitalCarousel.appendChild(img);
         }
 
-        bwCarousel.addEventListener('scroll', function () {
-            if (bwCarousel.scrollLeft + bwCarousel.offsetWidth >= bwCarousel.scrollWidth) {
-                var firstImg = bwCarousel.querySelector('.bw-photos');
-                bwCarousel.appendChild(firstImg);
-            }
-        });
+        // bwCarousel.addEventListener('scroll', function () {
+        //     if (bwCarousel.scrollLeft + bwCarousel.offsetWidth >= bwCarousel.scrollWidth) {
+        //         var firstImg = bwCarousel.querySelector('.bw-photos');
+        //         bwCarousel.appendChild(firstImg);
+        //     }
+        // });
 
-        digitalCarousel.addEventListener('scroll', function () {
-            if (digitalCarousel.scrollLeft + digitalCarousel.offsetWidth >= digitalCarousel.scrollWidth) {
-                var firstImg = digitalCarousel.querySelector('.digital-photos');
-                digitalCarousel.appendChild(firstImg);
-            }
-        });
+        // digitalCarousel.addEventListener('scroll', function () {
+        //     if (digitalCarousel.scrollLeft + digitalCarousel.offsetWidth >= digitalCarousel.scrollWidth) {
+        //         var firstImg = digitalCarousel.querySelector('.digital-photos');
+        //         digitalCarousel.appendChild(firstImg);
+        //     }
+        // });
     };
+
 
     generateNavBar();
 

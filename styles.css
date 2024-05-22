@@ -69,6 +69,8 @@ h2 {
   font-weight: 200;
 }
 
+
+
 p {
   font-size: 24px;
   line-height: 1.5;
@@ -135,32 +137,24 @@ header {
 .nav-item:hover .dropdown {
   display: flex;
   flex-direction: column;
-
-
 }
 
-/* photography carousels */
-.photo-carousel-container {
-  height: 300px;
-  /* Adjust this value to your needs */
-  overflow-y: auto;
+h3 {
+  font-weight: 200;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 50px;
 }
 
-#bw-carousel {
+#bw-carousel,
+#digital-carousel {
   display: flex;
   overflow-x: scroll;
   white-space: nowrap;
-  height: 40vw;
+
+
 }
-
-#digital-carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40vw;
-}
-
-
 
 #bw-carousel img,
 #digital-carousel img {
@@ -168,7 +162,8 @@ header {
   border-style: solid;
   border-width: 20px;
   flex: 8;
-  max-height: 70%;
+  height: 70vh;
+  object-fit: cover;
 
 }
 
