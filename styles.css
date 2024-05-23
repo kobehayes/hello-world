@@ -279,3 +279,22 @@ h3 {
   border-color: white;
   border-width: 1px;
 }
+
+/* ----VIDEO------- */
+/* 
+video {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 30px;
+} */
+
+
+.motion-graphics div {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+
+}
