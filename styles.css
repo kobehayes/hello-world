@@ -22,13 +22,6 @@ body {
   display: block;
   padding-top: 100px;
 
-  /* img {
-
-    width: 40%;
-    height: auto;
-    display: block;
-    margin: auto;
-  } */
 
 }
 
@@ -43,6 +36,8 @@ h1 {
 
 p {
   font-family: monospace;
+  font-size: 18px;
+  line-height: 1.7;
 }
 
 footer {
@@ -73,12 +68,6 @@ h2 {
   font-weight: 200;
 }
 
-
-
-p {
-  font-size: 24px;
-  line-height: 1.5;
-}
 
 /* ALL LINKS */
 a {
@@ -112,8 +101,7 @@ header {
   z-index: 5;
   width: 100%;
   background-color: black;
-  border-bottom: solid white;
-  border-width: 1px;
+  border-bottom: 1px solid white;
 
 }
 
@@ -129,9 +117,7 @@ header {
   color: #ffffff;
   padding: 9px;
   box-sizing: border-box;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
+  border: 1px solid white;
   border-radius: 17px;
   font-size: 18px;
 }
@@ -164,9 +150,7 @@ h3 {
 
 #bw-carousel img,
 #digital-carousel img {
-  border-color: white;
-  border-style: solid;
-  border-width: 20px;
+  border: 20px solid white;
   flex: 8;
   height: 70vh;
   object-fit: cover;
@@ -177,9 +161,7 @@ h3 {
 .graphic-works {
   display: flex;
   justify-content: space-between;
-  border-style: solid;
-  border-width: 1px;
-  border-color: orange;
+  border: 1px solid orange;
   padding: 30px;
 }
 
@@ -200,13 +182,11 @@ h3 {
 
 .work-info .work-date {
   font-size: 2em;
-
   font-style: italic;
+  margin: 0;
 }
 
 .work-info .work-desc {
-  font-size: 2em;
-
   max-width: 50%;
 }
 
@@ -260,9 +240,27 @@ h3 {
   background-color: #000000;
   color: white;
   font-size: 24px;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
+  border: 1px solid white;
+}
+
+#apollo {
+  display: block;
+}
+
+#apollo-embed {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  /* --DO NOT TOUCH--- */
+  width: 1400px;
+  height: 844px;
+}
+
+#apollo-embed-div {
+  position: relative;
+  /* width: 900px;
+  height: 100%; */
+  border: 1px solid white;
 }
 
 #animal-farm {
@@ -274,13 +272,6 @@ h3 {
   width: 90%;
 }
 
-/* ----VIDEO------- */
-/* 
-video {
-  max-width: 70%;
-  max-height: 70%;
-  margin: 30px;
-} */
 
 .motion-graphics {
   scroll-snap-type: y mandatory;
@@ -295,9 +286,7 @@ video {
   padding: 30px;
   display: flex;
   justify-content: space-between;
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
+  border: 1px solid white;
   min-height: 80vh;
   scroll-snap-align: start;
   scroll-margin: 50px;
@@ -320,9 +309,7 @@ video {
   scroll-snap-align: center;
   scroll-snap-type: y mandatory;
 
-  border-style: solid;
-  border-color: white;
-  border-width: 1px;
+  border: 1px solid white;
 
 }
 

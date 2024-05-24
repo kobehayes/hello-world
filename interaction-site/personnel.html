@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.typekit.net/ncw7cla.css">
+
+        <title>Personnel</title>
+    
+        <style>
+            body{
+			margin: 100px;
+
+            background-image:url(images/AdobeStock_266251260.jpeg);
+            background-attachment: fixed;
+            background-position: center;
+            background-size:contain;
+
+			color:white;
+        }
+		h1 {
+			font-size: 70px;
+			font-family: "octin-college", sans-serif;
+			font-weight: 400;
+			font-style: normal;
+
+			text-align: left;
+			
+		}
+		nav {
+            position: fixed;
+            width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+            background-color: rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(12px);
+			
+			padding-bottom: 10px;
+			padding-right: 70px;
+			padding-top: 25px;
+			margin-left: -100px;
+			margin-right:-100px;
+			margin-top:-100px;
+		}
+
+		nav a {
+			font-family: "octin-college", sans-serif;
+			font-weight: 400;
+			font-style: normal;
+
+
+			color:white;
+			text-decoration: none;
+			padding:10px;
+		
+		}
+		nav a:hover {
+			font-family: "octin-college", sans-serif;
+			font-weight: 700;
+			font-style: normal;
+
+			color: rgb(255, 179, 39);
+			text-decoration: none;
+
+		}
+        section{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction: column;
+        }
+        h2{
+
+        font-size: 30px;
+        text-align: center;
+        font-family: "source-sans-pro", sans-serif;
+        font-weight: 600px;
+        margin-top: 0;
+        }
+    
+        img{
+         
+            width:300px;
+            
+        }
+        .body{
+            display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              grid-gap:20px;
+              align-items: center;
+              justify-content: center;
+        }
+
+        .next{
+            font-family: "octin-college", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+            position:relative;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction:row;
+            justify-content: right;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(15px);
+            margin-top: 5%;
+            width: auto;
+            margin-bottom: -60px;
+           
+            }
+
+            .next:hover {
+            visibility: visible;
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            }
+
+            .next a {
+                
+            margin-right: 10px;
+            text-decoration: none;
+            color: white;
+            }
+
+            span{
+            font-size: 24px;
+            color:rgb(255, 179, 39);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">Home</a>
+			<a href="background.html">Background</a>
+			<a href="personnel.html"style="font-weight: bold;">Personnel</a>
+			<a href="preparation.html">Preparation</a>
+			<a href="mission.html">Mission</a>
+	    </nav>
+        <header>
+            <h1>Personnel</h1>
+        </header>
+        <div class="body">
+            <section>
+                <h2>Neil Armstrong: Commander</h2>
+                <img src="images/Neil_Armstrong_pose.jpg">
+            </section>
+            <section>
+                <h2>Michael Collins: Command Module Pilot</h2>
+                <img src="images/Michael_Collins_(S69-31742,_restoration) Large.jpeg">
+            </section>
+            <section>
+                <h2>Edwin “Buzz” Aldrin Jr.: Lunar Module Pilot</h2>
+                <img src="images/Buzz-Aldrin-1969.jpg">
+            </section>
+        </div>
+
+        <div class="next">
+            <a href="preparation.html">Preparation</a>
+            <span>&rarr;</span>
+          </div>
+    </body>
+        
+</html>
