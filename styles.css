@@ -54,7 +54,7 @@ footer {
 
   padding: 10px;
   padding-bottom: 25px;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 footer p {
@@ -151,6 +151,8 @@ h3 {
   margin-top: 50px;
 }
 
+
+
 #bw-carousel,
 #digital-carousel {
   display: flex;
@@ -170,22 +172,6 @@ h3 {
   object-fit: cover;
 
 }
-
-
-
-
-/* .photo-container {
-  overflow-y: visible;
-    overflow-x: auto;
-    white-space: nowrap;
-    vertical-align: text-top;
-    margin: 0;
-    padding: 0;
-    clear: both;
-    border-spacing: 5px;
-} */
-
-
 
 /* design page */
 .graphic-works {
@@ -235,7 +221,6 @@ h3 {
 
 /* aux carousels------- */
 
-/* CSS */
 #both-aux-carousels {
   display: flex;
   flex-direction: column-reverse;
@@ -251,7 +236,6 @@ h3 {
   margin: 20px;
 }
 
-/* CSS */
 .aux-carousels {
   display: flex;
   flex-direction: column;
@@ -261,11 +245,9 @@ h3 {
 
 }
 
-
 .carousel-controls {
   display: flex;
   justify-content: space-between;
-
 
 }
 
@@ -283,6 +265,15 @@ h3 {
   border-width: 1px;
 }
 
+#animal-farm {
+  flex-direction: column;
+}
+
+#bookwrap {
+  height: auto;
+  width: 90%;
+}
+
 /* ----VIDEO------- */
 /* 
 video {
@@ -291,6 +282,14 @@ video {
   margin: 30px;
 } */
 
+.motion-graphics {
+  scroll-snap-type: y mandatory;
+  /* Assuming vertical scrolling */
+  overflow-y: auto;
+  /* Makes the container scrollable */
+  height: 100vh;
+  /* Adjust as needed */
+}
 
 .motion-graphics div {
   padding: 30px;
@@ -299,5 +298,43 @@ video {
   border-style: solid;
   border-color: white;
   border-width: 1px;
+  min-height: 80vh;
+  scroll-snap-align: start;
+  scroll-margin: 50px;
 
+}
+
+/* typeface */
+
+.process {
+  display: inline-block;
+  text-align: left;
+}
+
+.process span {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+  scroll-snap-align: center;
+  scroll-snap-type: y mandatory;
+
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+
+}
+
+.process span div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.typeface-images {
+  width: auto;
+  height: 600px;
 }

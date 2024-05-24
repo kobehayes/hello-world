@@ -60,7 +60,6 @@
       padding: 0;
       width: 100%;
       height: 70vh;
-      /* Adjust this to control the visible portion of the image */
 
       display: block;
 
@@ -103,8 +102,8 @@
   <script src="script.js"></script>
   <script>
     let images = [
-      { src: 'photography/bw1.jpeg', caption: 'Caption 1', link: 'https://example.com/link1' },
-      { src: 'photography/bw2.jpeg', caption: 'Caption 2' },
+      { src: 'photography/pho5.jpeg', caption: 'St. Louis, 2023', link: 'photography.html#digital-photos' },
+      { src: 'aux-imgs/aux2-7.jpg', caption: 'AUX Magazine', link: 'graphic-design.html#aux' },
       { src: 'photography/pho3.jpeg', caption: 'Caption 3' }
     ]; // Array of image objects
     let currentIndex = 0; // Start at the first image
@@ -121,8 +120,9 @@
       currentIndex = (currentIndex + 1) % images.length; // Move to the next image, looping back to the first image if necessary
     }
 
-    // Change the image and caption every 3 seconds
-    setInterval(changeImage, 7000);
+
+    changeImage();
+    setInterval(changeImage, 6000);
 
     generateNavBar();
 
