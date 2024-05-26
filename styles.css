@@ -5,6 +5,9 @@
   src: url('font-engravers-trace.woff2') format('woff2');
 }
 
+
+
+
 body {
   font-family: "forma-djr-display", sans-serif;
   font-style: normal;
@@ -137,6 +140,12 @@ h3 {
   margin-top: 50px;
 }
 
+.padded-right {
+  padding-right: 200px;
+  /* Adjust as needed */
+}
+
+/* identify the first nav-item within nav-bar to add padding on right side of my name  */
 
 
 #bw-carousel,
@@ -200,6 +209,10 @@ h3 {
 }
 
 /* aux carousels------- */
+
+#aux {
+  flex-direction: column;
+}
 
 #both-aux-carousels {
   display: flex;
@@ -291,6 +304,17 @@ h3 {
   scroll-snap-align: start;
   scroll-margin: 50px;
 
+}
+
+#kemper {
+  flex-direction: column;
+
+}
+
+#kemper-image-container img {
+  object-fit: contain;
+  height: 100%;
+  width: auto;
 }
 
 /* typeface */

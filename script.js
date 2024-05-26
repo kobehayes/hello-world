@@ -6,6 +6,7 @@ function generateNavBar() {
     let navItems = [
         {
             text: 'Kobe Hayes', href: 'index.html',
+            class: 'padded-right'
         },
         {
             text: 'Graphic Design', href: 'graphic-design.html', dropdown: [
