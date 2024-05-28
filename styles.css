@@ -306,16 +306,28 @@ h3 {
 
 }
 
-#kemper {
-  flex-direction: column;
-
+.motion-text {
+  display: block;
 }
 
-#kemper-image-container img {
-  object-fit: contain;
-  height: 100%;
+#kemper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#kemper img {
+  height: 200px;
   width: auto;
 }
+
+
+
+/* #kemper-image-container img {
+  object-fit: contain;
+  height: 300px;
+  width: auto;
+} */
 
 /* typeface */
 
