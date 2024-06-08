@@ -70,20 +70,14 @@
       height: 70vh;
       display: block;
       object-fit: cover;
+      position: relative;
+      overflow: hidden;
     }
 
     /* homepage animations */
     #carousel-image {
-      transition: transform 1s ease-in-out;
-      transform: translateX(0);
-    }
-
-    #carousel-image.next {
-      transform: translateX(-100%);
-    }
-
-    #carousel-image.previous {
-      transform: translateX(100%);
+      position: absolute;
+      transition: left 0.5s ease-in-out;
     }
   </style>
 </head>
@@ -100,51 +94,60 @@
       <h2>multimedia artist and graphic designer</h2>
     </div>
 
-    <div id="image-cont">
-      <a id="carousel-link" href='#'>
+    <div id="canvasContainer">
+      <!-- <a id="carousel-link" href='#'>
 
         <img id="carousel-image" src="#">
-      </a>
+      </a> -->
+
+      <div id="home-bottom">
+
+      </div>
     </div>
 
-    <div id="home-bottom">
-
-    </div>
   </section>
 
-  <!-- <script src="homep5.js"></script> -->
+  <script src="homep5.js"></script>
   <script src="script.js"></script>
   <script>
-    let images = [
-      { src: new Image(), caption: 'St. Louis, 2023', link: 'photography.html#digital-photos' },
-      { src: new Image(), caption: 'AUX Magazine', link: 'graphic-design.html#aux' },
-      { src: new Image(), caption: 'St. Louis, 2023' }
-    ]; // Array of image objects
+    // let images = [
+    //   { src: new Image(), caption: 'St. Louis, 2023', link: 'photography.html#digital-photos' },
+    //   { src: new Image(), caption: 'AUX Magazine', link: 'graphic-design.html#aux' },
+    //   { src: new Image(), caption: 'St. Louis, 2023' }
+    // ]; // Array of image objects
 
-    // Pre-load the images
-    images[0].src.src = 'photography/pho5.jpeg';
-    images[1].src.src = 'aux-imgs/aux2-6.jpg';
-    images[2].src.src = 'photography/pho3.jpeg';
+    // // Pre-load the images
+    // images[0].src.src = 'photography/pho5.jpeg';
+    // images[1].src.src = 'aux-imgs/aux2-6.jpg';
+    // images[2].src.src = 'photography/pho3.jpeg';
 
-    let currentIndex = 0; // Start at the first image
+    // let currentIndex = 0; // Start at the first image
 
-    // Function to change the image and caption
-    function changeImage() {
-      let img = document.querySelector('#carousel-image');
-      let caption = document.querySelector('#home-bottom');
-      let link = document.querySelector('#carousel-link');
+    // // Function to change the image and caption
+    // function changeImage() {
+    //   let img = document.querySelector('#carousel-image');
+    //   let caption = document.querySelector('#home-bottom');
+    //   let link = document.querySelector('#carousel-link');
 
-      img.src = images[currentIndex].src.src;
-      link.href = images[currentIndex].link;
-      caption.textContent = images[currentIndex].caption;
-      currentIndex = (currentIndex + 1) % images.length; // Move to the next image, looping back to the first image if necessary
-    }
+    //   img.style.left = '-100%';
 
-    // Call the function once to set the first image
-    changeImage();
+    //   // Wait for the transition to finish before changing the image
+    //   setTimeout(() => {
+    //     img.src = images[currentIndex].src.src;
+    //     link.href = images[currentIndex].link;
+    //     caption.textContent = images[currentIndex].caption;
+    //     currentIndex = (currentIndex + 1) % images.length;
 
-    // Call the function every 3 seconds to change the image
-    setInterval(changeImage, 3000);
+    //     // Move the new image into the container
+    //     img.style.left = '0';
+    //   }, 500); // The timeout should be the same as the transi
+    // }
+
+    // // Call the function once to set the first image
+    // changeImage();
+
+    // // Call the function every 3 seconds to change the image
+    // setInterval(changeImage, 3000);
 
 
     generateNavBar();
