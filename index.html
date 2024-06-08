@@ -108,7 +108,7 @@
     </div>
 
     <div id="home-bottom">
-      Caption 0
+
     </div>
   </section>
 
@@ -116,10 +116,16 @@
   <script src="script.js"></script>
   <script>
     let images = [
-      { src: 'photography/pho5.jpeg', caption: 'St. Louis, 2023', link: 'photography.html#digital-photos' },
-      { src: 'aux-imgs/aux2-7.jpg', caption: 'AUX Magazine', link: 'graphic-design.html#aux' },
-      { src: 'photography/pho3.jpeg', caption: 'St. Louis, 2023' }
+      { src: new Image(), caption: 'St. Louis, 2023', link: 'photography.html#digital-photos' },
+      { src: new Image(), caption: 'AUX Magazine', link: 'graphic-design.html#aux' },
+      { src: new Image(), caption: 'St. Louis, 2023' }
     ]; // Array of image objects
+
+    // Pre-load the images
+    images[0].src.src = 'photography/pho5.jpeg';
+    images[1].src.src = 'aux-imgs/aux2-6.jpg';
+    images[2].src.src = 'photography/pho3.jpeg';
+
     let currentIndex = 0; // Start at the first image
 
     // Function to change the image and caption
@@ -128,48 +134,54 @@
       let caption = document.querySelector('#home-bottom');
       let link = document.querySelector('#carousel-link');
 
-      img.src = images[currentIndex].src;
+      img.src = images[currentIndex].src.src;
       link.href = images[currentIndex].link;
       caption.textContent = images[currentIndex].caption;
       currentIndex = (currentIndex + 1) % images.length; // Move to the next image, looping back to the first image if necessary
     }
 
-    function changeImage(direction) {
-      let img = document.querySelector('#carousel-image');
+    // Call the function once to set the first image
+    changeImage();
 
-      // Update the image index
-      if (direction === 'next') {
-        currentIndex = (currentIndex + 1) % images.length;
-      } else if (direction === 'previous') {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-      }
-      // Remove the 'next' and 'previous' classes to reset the position
-      img.classList.remove('next', 'previous');
+    // Call the function every 3 seconds to change the image
+    setInterval(changeImage, 3000);
 
-      // Change the direction of the slide based on the direction parameter
-      if (direction === 'next') {
-        img.classList.add('previous');
-      } else if (direction === 'previous') {
-        img.classList.add('next');
-      }
+    // function changeImage(direction) {
+    //   let img = document.querySelector('#carousel-image');
 
-      // Change the image after the slide out is complete
-      setTimeout(function () {
-        img.src = images[currentIndex].src;
+    //   // Update the image index
+    //   if (direction === 'next') {
+    //     currentIndex = (currentIndex + 1) % images.length;
+    //   } else if (direction === 'previous') {
+    //     currentIndex = (currentIndex - 1 + images.length) % images.length;
+    //   }
+    //   // Remove the 'next' and 'previous' classes to reset the position
+    //   img.classList.remove('next', 'previous');
 
-        // Add the 'next' or 'previous' class to start the slide in
-        if (direction === 'next') {
-          img.classList.remove('previous');
-          img.classList.add('next');
-        } else if (direction === 'previous') {
-          img.classList.remove('next');
-          img.classList.add('previous');
-        }
-      }, 1000); // Match this to the duration of your transition
-    }
+    //   // Change the direction of the slide based on the direction parameter
+    //   if (direction === 'next') {
+    //     img.classList.add('previous');
+    //   } else if (direction === 'previous') {
+    //     img.classList.add('next');
+    //   }
 
-    changeImage(direction = 'next');
-    setInterval(changeImage, 6000);
+    //   // Change the image after the slide out is complete
+    //   setTimeout(function () {
+    //     img.src = images[currentIndex].src;
+
+    //     // Add the 'next' or 'previous' class to start the slide in
+    //     if (direction === 'next') {
+    //       img.classList.remove('previous');
+    //       img.classList.add('next');
+    //     } else if (direction === 'previous') {
+    //       img.classList.remove('next');
+    //       img.classList.add('previous');
+    //     }
+    //   }, 1000); // Match this to the duration of your transition
+    // }
+
+    // changeImage(direction = 'next');
+    // setInterval(changeImage, 6000);
 
     generateNavBar();
 
