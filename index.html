@@ -146,42 +146,6 @@
     // Call the function every 3 seconds to change the image
     setInterval(changeImage, 3000);
 
-    // function changeImage(direction) {
-    //   let img = document.querySelector('#carousel-image');
-
-    //   // Update the image index
-    //   if (direction === 'next') {
-    //     currentIndex = (currentIndex + 1) % images.length;
-    //   } else if (direction === 'previous') {
-    //     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    //   }
-    //   // Remove the 'next' and 'previous' classes to reset the position
-    //   img.classList.remove('next', 'previous');
-
-    //   // Change the direction of the slide based on the direction parameter
-    //   if (direction === 'next') {
-    //     img.classList.add('previous');
-    //   } else if (direction === 'previous') {
-    //     img.classList.add('next');
-    //   }
-
-    //   // Change the image after the slide out is complete
-    //   setTimeout(function () {
-    //     img.src = images[currentIndex].src;
-
-    //     // Add the 'next' or 'previous' class to start the slide in
-    //     if (direction === 'next') {
-    //       img.classList.remove('previous');
-    //       img.classList.add('next');
-    //     } else if (direction === 'previous') {
-    //       img.classList.remove('next');
-    //       img.classList.add('previous');
-    //     }
-    //   }, 1000); // Match this to the duration of your transition
-    // }
-
-    // changeImage(direction = 'next');
-    // setInterval(changeImage, 6000);
 
     generateNavBar();
 
