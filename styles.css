@@ -11,9 +11,11 @@
 body {
   font-family: "forma-djr-display", sans-serif;
   font-style: normal;
-  background-color: rgb(31, 10, 3);
+  background-color: rgb(0, 0, 0);
   color: white;
   padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 
 }
 
@@ -67,6 +69,19 @@ footer .scroll-header {
   margin-top: 70vh;
 }
 
+.scroll-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: transform 0.3s ease; */
+  height: 90vh;
+  padding: 20vh 0;
+  /* Adjust as needed */
+  box-sizing: border-box;
+  /* Include padding in element's total height */
+  text-align: center;
+}
+
 h2 {
   font-weight: 200;
 }
@@ -76,6 +91,8 @@ h2 {
 a {
   color: #ffffff;
   text-decoration: none;
+  /* text-decoration: underline;
+  text-decoration-style: dotted; */
   padding-bottom: 5px;
 }
 
@@ -106,6 +123,7 @@ header {
   background-color: black;
   border-bottom: 1px solid white;
 
+
 }
 
 
@@ -123,6 +141,7 @@ header {
   border: 1px solid white;
   border-radius: 17px;
   font-size: 18px;
+
 }
 
 /* actual navbar labels */
@@ -130,6 +149,7 @@ header {
 .nav-item:hover .dropdown {
   display: flex;
   flex-direction: column;
+
 }
 
 h3 {
@@ -170,14 +190,16 @@ h3 {
 .graphic-works {
   display: flex;
   justify-content: space-between;
-  border: 1px solid orange;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
   padding: 30px;
 }
 
 
 .work-info {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 
 }
@@ -185,8 +207,9 @@ h3 {
 .work-info .work-title {
   font-size: 5vw;
   margin-top: 0;
-
-  width: 70%;
+  margin-bottom: 1vw;
+  /* 
+  width: 70%; */
 }
 
 .work-info .work-date {
@@ -197,9 +220,8 @@ h3 {
 
 .work-info .work-desc {
   max-width: 50%;
+  margin-bottom: 5vw;
 }
-
-
 
 #book-front-cover {
   margin-right: 50px;
@@ -223,7 +245,7 @@ h3 {
 
 
 .aux-carousels img {
-  height: 70vh;
+  height: 80vh;
   width: auto;
   object-fit: contain;
   margin: 20px;
@@ -299,7 +321,7 @@ h3 {
   padding: 30px;
   display: flex;
   justify-content: space-between;
-  border: 1px solid white;
+
   min-height: 80vh;
   scroll-snap-align: start;
   scroll-margin: 50px;
