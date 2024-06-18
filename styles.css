@@ -80,6 +80,8 @@ footer .scroll-header {
   box-sizing: border-box;
   /* Include padding in element's total height */
   text-align: center;
+  stroke: 1px solid black;
+
 }
 
 h2 {
