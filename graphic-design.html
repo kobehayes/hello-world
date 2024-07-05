@@ -36,27 +36,27 @@
         <!-- can anything be performance art -->
         <span class="graphic-works" id="perf-book">
 
-
-
-
             <div class="work-info">
-                <h2 class="work-title">Can Anything Be Performance Art?
-                </h2>
-                <h3 class="work-date">2022</h3>
+                <div class="title-and-date">
+                    <h2 class="work-title">Can Anything Be Performance Art?
+                    </h2>
+                    <h3 class="work-date">2022</h3>
+                </div>
                 <p class="work-desc">A harcover book using text from Alice Bucknell's article
                     <a href="https://www.artsy.net/article/artsy-editorial-performance-art"
                         style="font-style:italic">Can
                         Anything Be Performance Art?</a> designed, typeset, and bound by moi. This book was selected to
                     appear in the NASAD review etc etc
                 </p>
-                <div class="aux-carousels" id="aux3-carousel">
-                    <img id="carouselImg3" src="" alt="carousel image">
-                    <div class="carousel-controls">
-                        <button id="prevBtn3">&lt; ----</button>
-                        <button id="nextBtn3">----- &gt;</button>
-                    </div>
+            </div>
+            <div class="aux-carousels" id="aux3-carousel">
+                <img id="carouselImg3" src="" alt="carousel image">
+                <div class="carousel-controls">
+                    <button id="prevBtn3">&lt; ----</button>
+                    <button id="nextBtn3">----- &gt;</button>
                 </div>
             </div>
+
 
             <!-- <img id="book-front-cover" src="book-imgs/front cover vector.svg"> -->
         </span>
@@ -67,9 +67,11 @@
         <span class="graphic-works" id="aux">
 
             <div class="work-info" id="aux-work-info">
-                <h2 class="work-title">AUX Magazine
-                </h2>
-                <h3 class="work-date">2023, 2024</h3>
+                <div class="title-and-date">
+                    <h2 class="work-title">AUX Magazine
+                    </h2>
+                    <h3 class="work-date">2023, 2024</h3>
+                </div>
 
                 <p class="work-desc">The first two editions of Washington University's music magazine, designed and
                     typeset
@@ -96,26 +98,38 @@
         <!-- apollo interactive -->
         <span class="graphic-works" id="apollo">
             <div class="work-info">
-                <h2 class="work-title" id="a-work-3">Apollo 11
-                </h2>
-                <h3 class="work-date">2023</h3>
+                <div class="title-and-date">
+                    <h2 class="work-title" id="a-work-3">Apollo 11
+                    </h2>
+                    <h3 class="work-date">2023</h3>
+                </div>
                 <p class="work-desc">An interactive multi-page website telling the story of America's first trip to the
                     moon</p>
 
             </div>
+            <img class="graphic-design-img" id="apollo-screenshot" src="interaction-site/apollo-screenshot.png">
             <div id="apollo-embed-div">
                 <embed id="apollo-embed" src="interaction-site/index.html">
             </div>
         </span>
 
+
+        <!-- alt poster -->
         <span class="graphic-works" id="alt-poster">
             <div class="work-info">
-                <h2 class="work-title">Activist Art of the AIDS Crisis
-                </h2>
-                <h3 class="work-date">2022</h3>
+                <div class="title-and-date">
+                    <h2 class="work-title">Activist Art of the AIDS Crisis
+                    </h2>
+                    <h3 class="work-date">2022</h3>
+                </div>
 
                 <p class="work-desc">A double-sided poster displaying queer artworks, artists, and activism during the
                     AIDS Crisis</p>
+            </div>
+
+            <div class="graphic-design-img" id="alt-img-container">
+                <img id="alt-1" src="type2/alt-1.jpg">
+                <img id="alt-2" src="type2/alt-2.jpg">
             </div>
 
         </span>
@@ -123,13 +137,15 @@
         <!-- animal farm -->
         <span class="graphic-works" id="animal-farm">
             <div class="work-info">
-                <h2 class="work-title" id="a-work-3">Animal Farm book jacket
-                </h2>
-                <h3 class="work-date">2022</h3>
+                <div class="title-and-date">
+                    <h2 class="work-title" id="a-work-3">Animal Farm book jacket
+                    </h2>
+                    <h3 class="work-date">2022</h3>
+                </div>
 
-                <p class="work-desc">A </p>
+                <p class="work-desc">A mock book jacket for George Orwell's <em>Animal Farm</em></p>
             </div>
-            <img id="bookwrap" src="bookwrap-image.jpeg">
+            <img class="graphic-design-img" id="bookwrap" src="type2/bookwrap-img.jpg">
         </span>
     </section>
     <!-- ------------------- -->
@@ -138,7 +154,7 @@
     <script>
 
 
-        let images1 = [
+        let images2 = [
 
             'aux-imgs/aux1-1.jpg',
             'aux-imgs/aux1-2.jpg',
@@ -153,7 +169,7 @@
             'aux-imgs/aux1-11.jpg'
         ]
 
-        let images2 = [
+        let images1 = [
 
             'aux-imgs/aux2-1.jpg',
             'aux-imgs/aux2-2.jpg',

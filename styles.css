@@ -188,7 +188,7 @@ h3 {
 
 }
 
-/* design page */
+/* --------------design page */
 .graphic-works {
   display: flex;
   justify-content: space-between;
@@ -196,14 +196,19 @@ h3 {
   align-items: center;
   text-align: left;
   padding: 30px;
+  border-bottom: 1px solid white;
 }
 
 
 .work-info {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.title-and-date {
+  display: block;
 }
 
 .work-info .work-title {
@@ -218,11 +223,13 @@ h3 {
   font-size: 2em;
   font-style: italic;
   margin: 0;
+  align-self: flex-end;
 }
 
 .work-info .work-desc {
   max-width: 50%;
   margin-bottom: 5vw;
+  align-self: flex-end;
 }
 
 #book-front-cover {
@@ -280,9 +287,9 @@ h3 {
   border: 1px solid white;
 }
 
-#apollo {
+/* #apollo {
   display: block;
-}
+} */
 
 #apollo-embed {
   /* position: absolute; */
@@ -294,22 +301,41 @@ h3 {
 }
 
 #apollo-embed-div {
+  display: none;
   position: relative;
   /* width: 900px;
   height: 100%; */
   border: 1px solid white;
 }
 
-#animal-farm {
-  flex-direction: column;
-}
-
-#bookwrap {
+/* bottom three works in gd page */
+.graphic-design-img {
+  width: 80vw;
   height: auto;
-  width: 90%;
 }
 
+#alt-img-container {
+  display: flex;
 
+  justify-content: space-between;
+
+  width: 80vw;
+}
+
+#alt-1,
+#alt-2 {
+  width: 50%;
+  height: auto;
+}
+
+/* #animal-farm {
+  flex-direction: column;
+} */
+
+
+
+
+/* TIME BASED---------------- */
 .motion-graphics {
   scroll-snap-type: y mandatory;
   /* Assuming vertical scrolling */
