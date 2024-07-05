@@ -90,22 +90,22 @@ function generateNavBar() {
 }
 
 //---------animate h1 on scroll
-window.addEventListener('scroll', function () {
-    let scrollPosition = window.scrollY;
-    let headers = document.getElementsByClassName('scroll-header');
-    if (headers.length > 0) {
-        // Calculate a scale factor based on the scroll position. 
-        // This will make the header shrink as the user scrolls down.
-        // Adjust the divisor to control how quickly the header shrinks.
-        let scaleFactor = 1 - (scrollPosition / 800);
+// window.addEventListener('scroll', function () {
+//     let scrollPosition = window.scrollY;
+//     let headers = document.getElementsByClassName('scroll-header');
+//     if (headers.length > 0) {
+//         // Calculate a scale factor based on the scroll position. 
+//         // This will make the header shrink as the user scrolls down.
+//         // Adjust the divisor to control how quickly the header shrinks.
+//         let scaleFactor = 1 - (scrollPosition / 800);
 
-        // Ensure the scale factor doesn't go below 0
-        if (scaleFactor < 0) scaleFactor = 0;
+//         // Ensure the scale factor doesn't go below 0
+//         if (scaleFactor < 0) scaleFactor = 0;
 
-        // Apply the scale transformation to the header
-        headers[0].style.transform = `scale(${scaleFactor})`;
-    }
-});
+//         // Apply the scale transformation to the header
+//         headers[0].style.transform = `scale(${scaleFactor})`;
+//     }
+// });
 
 function generateFooter(name, contactInfo) {
     // Create a new footer element

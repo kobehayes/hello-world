@@ -69,19 +69,32 @@ footer .scroll-header {
   margin-top: 70vh;
 }
 
-.scroll-header {
+/* .scroll-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* transition: transform 0.3s ease; */
+ 
   height: 90vh;
   padding: 20vh 0;
-  /* Adjust as needed */
+  
   box-sizing: border-box;
-  /* Include padding in element's total height */
+ 
   text-align: center;
   stroke: 1px solid black;
 
+} */
+
+#graphic-header {
+  display: flex;
+  justify-content: center;
+  /* padding: 20vh 0; */
+  box-sizing: border-box;
+  /* Ensure padding is included in the element's total dimensions */
+  font-size: 20em;
+  /* Increase font size */
+  word-wrap: break-word;
+  /* Allow long words to break and wrap */
+  line-height: 0.6;
 }
 
 h2 {
@@ -212,7 +225,7 @@ h3 {
   display: block;
 }
 
-.work-info .work-title {
+.work-title {
   font-size: 5vw;
   margin-top: 0;
   margin-bottom: 1vw;
@@ -220,14 +233,14 @@ h3 {
   width: 70%; */
 }
 
-.work-info .work-date {
+.work-date {
   font-size: 2em;
   font-style: italic;
   margin: 0;
   align-self: flex-end;
 }
 
-.work-info .work-desc {
+.work-desc {
   max-width: 50%;
   margin-bottom: 5vw;
   align-self: flex-end;
@@ -348,7 +361,10 @@ h3 {
   overflow-y: auto;
   /* Makes the container scrollable */
   height: 100vh;
-  /* Adjust as needed */
+}
+
+#motion-subhead {
+  font-size: 4em;
 }
 
 .motion-graphics div {
