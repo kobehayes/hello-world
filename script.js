@@ -127,38 +127,38 @@ function generateNavBar() {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollUnits = document.querySelectorAll('.graphic-works'); // Select all elements
-    const initialPositions = [];
+// document.addEventListener("DOMContentLoaded", function () {
+//     const scrollUnits = document.querySelectorAll('.graphic-works'); // Select all elements
+//     const initialPositions = [];
 
-    // Store the initial top position of each element
-    scrollUnits.forEach((scrollUnit, index) => {
-        initialPositions[index] = scrollUnit.getBoundingClientRect().top + window.pageYOffset;
-    });
+//     // Store the initial top position of each element
+//     scrollUnits.forEach((scrollUnit, index) => {
+//         initialPositions[index] = scrollUnit.getBoundingClientRect().top + window.pageYOffset;
+//     });
 
-    window.addEventListener('scroll', function () {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        const viewportHeight = window.innerHeight;
-        const middleScreen = viewportHeight / 2;
+//     window.addEventListener('scroll', function () {
+//         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+//         const viewportHeight = window.innerHeight;
+//         const middleScreen = viewportHeight / 2;
 
-        scrollUnits.forEach((scrollUnit, index) => {
-            const elementCenter = scrollUnit.getBoundingClientRect().top + (scrollUnit.offsetHeight / 2) + scrollPosition;
-            const distanceToMiddle = Math.abs(middleScreen - elementCenter);
+//         scrollUnits.forEach((scrollUnit, index) => {
+//             const elementCenter = scrollUnit.getBoundingClientRect().top + (scrollUnit.offsetHeight / 2) + scrollPosition;
+//             const distanceToMiddle = Math.abs(middleScreen - elementCenter);
 
-            // Calculate how far the page has been scrolled from the element's initial position
-            let distanceScrolled = scrollPosition - initialPositions[index];
+//             // Calculate how far the page has been scrolled from the element's initial position
+//             let distanceScrolled = scrollPosition - initialPositions[index];
 
-            // Adjust the speed based on the distance to the middle of the screen
-            // The closer to the middle, the smaller the divisor, making the movement slower
-            let speedAdjustmentFactor = Math.max(1, distanceToMiddle / 1000);
+//             // Adjust the speed based on the distance to the middle of the screen
+//             // The closer to the middle, the smaller the divisor, making the movement slower
+//             let speedAdjustmentFactor = Math.max(1, distanceToMiddle / 1000);
 
-            // Apply the movement only if the element is within the viewport and the page has been scrolled past the element's initial position
-            if (distanceScrolled > 0) {
-                scrollUnit.style.transform = `translateY(${distanceScrolled / speedAdjustmentFactor}px)`;
-            }
-        });
-    });
-});
+//             // Apply the movement only if the element is within the viewport and the page has been scrolled past the element's initial position
+//             if (distanceScrolled > 0) {
+//                 scrollUnit.style.transform = `translateY(${distanceScrolled / speedAdjustmentFactor}px)`;
+//             }
+//         });
+//     });
+// });
 
 function generateFooter(name, contactInfo) {
     // Create a new footer element
