@@ -69,31 +69,13 @@ footer .scroll-header {
   margin-top: 70vh;
 }
 
-/* .scroll-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  height: 90vh;
-  padding: 20vh 0;
-  
-  box-sizing: border-box;
- 
-  text-align: center;
-  stroke: 1px solid black;
-
-} */
 
 #graphic-header {
   display: flex;
   justify-content: center;
-  /* padding: 20vh 0; */
   box-sizing: border-box;
-  /* Ensure padding is included in the element's total dimensions */
   font-size: 20em;
-  /* Increase font size */
   word-wrap: break-word;
-  /* Allow long words to break and wrap */
   line-height: 0.6;
 }
 
@@ -102,24 +84,40 @@ h2 {
 }
 
 
-/* ALL LINKS */
+/* ------------------ALL LINKS */
+
+/* default link state, all navbar links */
 a {
-  color: #ffffff;
   text-decoration: none;
-  /* text-decoration: underline;
-  text-decoration-style: dotted; */
-  padding-bottom: 5px;
+  color: #ffffff;
 }
 
 a:hover {
 
-  color: rgb(255, 98, 0);
+  text-decoration: none;
+  color: #ff6200;
 }
+
+/* on page links only, adds bottom border */
+.main a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 3px dotted #ffffff;
+  padding-bottom: 2px;
+
+}
+
+.main a:hover {
+  color: rgb(255, 98, 0);
+  border-bottom: 5px dotted rgb(255, 98, 0);
+}
+
 
 
 header {
   width: 100%;
 }
+
 
 #navbar {
   display: flex;
@@ -137,18 +135,16 @@ header {
   width: 100%;
   background-color: black;
   border-bottom: 1px solid white;
-
-
 }
+
 
 
 .dropdown {
   display: none;
-  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 
-  /* top: 100%; */
-  /* ----------dropdown menu------- */
-  /* width: 175pxpx; */
+  position: absolute;
   background-color: #000000;
   color: #ffffff;
   padding: 9px;
@@ -164,6 +160,7 @@ header {
 .nav-item:hover .dropdown {
   display: flex;
   flex-direction: column;
+  opacity: 1;
 
 }
 
@@ -177,7 +174,7 @@ h3 {
 
 .padded-right {
   padding-right: 200px;
-  /* Adjust as needed */
+
 }
 
 /* identify the first nav-item within nav-bar to add padding on right side of my name  */

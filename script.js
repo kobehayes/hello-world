@@ -10,45 +10,41 @@ function generateNavBar() {
         },
         {
             text: 'Graphic Design', href: 'graphic-design.html', dropdown: [
-                { text: 'Can Anything Be Performance Art', href: '#' },
-                { text: 'AUX Magazine', href: '#' },
-                { text: 'Apollo 11', href: '#' },
-                { text: 'Animal Farm', href: '#' },
+                { text: 'Can Anything Be Performance Art', href: 'graphic-design.html#perf-book' },
+                { text: 'AUX Magazine', href: 'graphic-design.html#aux' },
+                { text: 'Apollo 11', href: 'graphic-design.html#apollo' },
+                { text: 'Activist Art of the AIDS Crisis', href: 'graphic-design.html#alt-poster' },
+                { text: 'Animal Farm', href: 'graphic-design.html#animal-farm' },
             ]
         },
-        // {
-        //     text: 'Analog', href: 'analog.html', dropdown: [
-        //         { text: 'asdf', href: '#' },
-        //         { text: 'asdf', href: '#' },
-        //         { text: 'asdf', href: '#' },
-        //     ]
-        // },
+
         {
             text: 'Time-Based', href: 'time-based.html', dropdown: [
-                { text: 'asdf', href: '#' },
-                { text: 'asdf', href: '#' },
-                { text: 'asdf', href: '#' },
+                { text: 'Singularity Synth', href: 'time-based.html#kemper' },
+                { text: 'Music\'s Elite Seat', href: 'time-based.html#motion2' },
+                { text: 'How does sound work?', href: 'time-based.html#motionfinal' },
+                { text: 'Bounce Back from Burnout', href: 'time-based.html#motion1' },
             ]
         },
         {
             text: 'Photography', href: 'photography.html', dropdown: [
-                { text: '35mm Photography', href: '#' },
+                { text: '35mm Photography', href: 'photography.html#bw-photos' },
                 { text: 'Digital Photography', href: 'photography.html#digital-photos' },
 
             ]
         },
         {
             text: 'Typeface', href: 'typeface.html', dropdown: [
-                { text: 'Process', href: '#' },
-                { text: 'Sketches', href: '#' },
+                { text: 'Process', href: 'typeface.html#process' },
+                // { text: 'Sketches', href: 'typeface.html#sketches' },
 
             ]
         },
         {
             text: 'About', href: 'about.html', dropdown: [
-                { text: 'asdf', href: '#' },
-                { text: 'asdf', href: '#' },
-                { text: 'asdf', href: '#' },
+                // { text: 'asdf', href: '#' },
+                // { text: 'asdf', href: '#' },
+                // { text: 'asdf', href: '#' },
             ]
         },
 
