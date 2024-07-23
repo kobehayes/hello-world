@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/mzx0vll.css">
     <title>
-        Time-Based
+        time-based - KOBE HAYES
     </title>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script> -->
 </head>
@@ -21,22 +21,29 @@
 
 
     <section class="main" id="time-based-main">
-        <h1 id="time-based-header">TIME-BASED</h1>
+        <h1 class="page-header" id="time-based-header">TIME-BASED</h1>
 
         <!-- interactive kemper -->
         <span class="graphic-works" id="kemper">
             <h2 class="work-title">Museum Installation: "Singularity Synth"</h2>
             <h3 class="work-date">2024</h3>
-            <p class="work-desc">Singularity Synth is an interactive audiovisual installation at the Mildred Lane Kemper
-                Art Museum at
-                Washington University in St. Louis. The installation displays a video, and parameters of the video can
-                be controlled via a MIDI controller. Made with Max MSP, Premiere Pro, and an emulation of the Fairlight
-                CMI sampler</p>
-            <img src="kemper-photos/kemper-pic2.jpeg">
-            <img src="kemper-photos/kemper-pic3.jpeg">
-            <img src="kemper-photos/kemper-pic1.jpeg">
-            <img src="kemper-photos/kemper-pic4.jpeg">
-            <img src="kemper-photos/kemper-pic5.jpeg">
+            <img id="kemper-main-photo" src="kemper-photos/kemper-pic4.jpeg">
+            <div id="kemper-photo-grid">
+                <p class="work-desc">Singularity Synth is an interactive audiovisual installation at the Mildred Lane
+                    Kemper
+                    Art Museum at
+                    Washington University in St. Louis. The installation displays a video, and parameters of the video
+                    can
+                    be controlled via a MIDI controller. Made with Max MSP, Premiere Pro, and an emulation of the
+                    Fairlight
+                    CMI sampler.</p>
+                <img class="kemper-vertical" src="kemper-photos/kemper-pic2.jpeg">
+                <img class="kemper-vertical" src="kemper-photos/kemper-pic3.jpeg">
+                <img class="kemper-landscape" src="kemper-photos/kemper-pic1.jpeg">
+                <img class="kemper-landscape" src="kemper-photos/kemper-pic5.jpeg">
+            </div>
+
+
 
 
         </span>
@@ -45,7 +52,7 @@
 
             <h1 class="work-title" id="motion-subhead">Motion Graphics</h1>
 
-            <div id="motion2">
+            <div id="elite-seat">
                 <span class="motion-text">
                     <h2 class="work-title">Music's Elite Seat</h2>
                     <h3 class="work-date">2023</h3>
@@ -58,7 +65,7 @@
                     preload="auto"></video>
             </div>
 
-            <div id="motionfinal">
+            <div id="how-does-sound-work">
                 <span class="motion-text">
                     <h2 class="work-title">How does sound work?</h2>
                     <h3 class="work-date">2023</h3>
@@ -69,7 +76,7 @@
                     preload="auto"></video>
             </div>
 
-            <div id="motion1">
+            <div id="bounce-back">
                 <span class="motion-text">
                     <h2 class="work-title">Bounce Back from Burnout</h2>
                     <h3 class="work-date">2023</h3>
@@ -81,26 +88,10 @@
             </div>
 
         </span>
-        <!-- <span class="sound">
-            <h2>Sound</h2>
-<div id="tbm-audio1">
-    <h3>Time-Based Media audio1</h3>
-<audio controls>
-    <source src="t" type="audio/mpeg" />
-    
-</audio>
 
-
-</div>
-<div id="tbm-audio2">
-    <h3>Time-Based Media audio2</h3>
-
-
-</div>
-        </span> -->
     </section>
     <!-- ------------------- -->
-    <script src="p5.js"></script>
+
     <script src="script.js"></script>
     <script>
         generateNavBar();
