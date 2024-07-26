@@ -101,7 +101,7 @@ a:hover {
 }
 
 .main a:hover {
-  color: rgb(255, 98, 0);
+  color: #ff6200;
   border-bottom: 5px dotted rgb(255, 98, 0);
 }
 
@@ -464,4 +464,20 @@ h3 {
 .typeface-images {
   width: auto;
   height: 600px;
+}
+
+/* ------ABOUT---- */
+#entire-about-page {
+  margin: 0 5em;
+
+}
+
+#about-header {
+  display: flex;
+
+}
+
+#headshot {
+  height: 30vh;
+  width: auto;
 }
