@@ -28,26 +28,89 @@ body {
   padding-top: 100px;
 }
 
-h1 {
+
+.page-header {
+
   word-wrap: break-word;
   width: 100%;
   max-width: 100vw;
   font-size: 20em;
   font-weight: bold;
+
   margin-bottom: 0.2em;
   margin-top: 0;
+  line-height: 0.65;
+
   font-style: italic;
   position: relative;
-}
-
-.page-header {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  line-height: 0.65;
-  width: 100%;
-  max-width: 100vw;
+
+  flex-direction: column;
+  mix-blend-mode: difference;
+
 }
+
+.last-line {
+  /* display: inline-block; */
+  mix-blend-mode: difference;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-250%);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 100%;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+/* ANIMATION FOR HEADERS */
+
+.last-line,
+#typeface-header {
+  animation: floatDown 1s ease-out forwards;
+
+  animation-fill-mode: backwards;
+}
+
+.first-line {
+  animation: floatDown 0.8s ease-out forwards;
+  animation-fill-mode: backwards;
+  animation-delay: 0.2s;
+}
+
+
+
+/* ANIMATION FOR EACH WORK */
+
+/* .work-title,
+.work-date,
+.work-desc {
+  animation: floatDown 1s ease-out forwards;
+}
+
+.work-title {
+  animation-delay: 0.5s;
+}
+
+.work-date {
+  animation-delay: 1s;
+}
+
+.work-desc {
+  animation-delay: 1.5s;
+} */
+
+
 
 p {
   font-family: monospace;
@@ -73,7 +136,7 @@ footer p {
   color: white;
   text-align: right;
 
-  padding-right: 60px;
+  padding-right: 80px;
 
 }
 
@@ -188,7 +251,104 @@ h3 {
 
 /* identify the first nav-item within nav-bar to add padding on right side of my name  */
 
+/* HOME PAGE----------- */
+#home-header {
+  mix-blend-mode: difference;
+}
 
+
+
+/* Custom cursor */
+#home-main {
+  background-image: url('book-imgs/anything-graphic.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  cursor: url('/favicon.png'), auto;
+  position: relative;
+
+  --cursor-x: 0;
+  --cursor-y: 0;
+}
+
+
+
+#home-main::after {
+  content: '';
+  position: absolute;
+  width: 32px;
+  /* Size of the custom cursor */
+  height: 32px;
+  /* Size of the custom cursor */
+  pointer-events: none;
+  /* Allow clicks to pass through */
+  /* background: inherit; */
+  /* Inherit background from parent */
+  /* filter: invert(1); */
+  /* Invert colors */
+  mix-blend-mode: difference;
+  /* Ensure the inversion effect */
+}
+
+#home-main:hover::after {
+  display: block;
+  left: var(--cursor-x);
+  top: var(--cursor-y);
+}
+
+#homepage-photo-gallery {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.homepage-gallery-container {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.gallery-content {
+  display: flex;
+}
+
+.gallery-content img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+
+  object-fit: contain;
+  filter: grayscale(100%);
+
+}
+
+.homepage-gallery-container:hover {
+  animation-play-state: paused;
+}
+
+.gallery-content img:hover {
+  transform: scale(1.2);
+  filter: none;
+  /* Scale up the image */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+
+/* ------PHOTOGRAPHY----- */
 #bw-carousel,
 #digital-carousel {
   display: flex;
@@ -413,6 +573,10 @@ h3 {
 
 }
 
+.motion-graphics div:last-child {
+  border-bottom: none;
+}
+
 .motion-text {
   display: flex;
   flex-direction: column;
@@ -420,9 +584,7 @@ h3 {
   align-items: flex-start;
 }
 
-#bounce-back {
-  border-bottom: none;
-}
+
 
 .motion-graphics .work-desc {
   max-width: fit-content;
@@ -445,15 +607,16 @@ h3 {
   justify-content: space-between;
 
   margin-bottom: 20px;
+  margin-top: 3em;
 
-  scroll-snap-align: center;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-align: center;
+  scroll-snap-type: y mandatory; */
 
-  border: 1px solid white;
+  border-top: 1px solid white;
 
 }
 
-.process span div {
+.typeface-body {
   display: flex;
   flex-direction: column;
   align-items: start;

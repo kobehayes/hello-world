@@ -107,3 +107,17 @@ function generateFooter(name, contactInfo) {
 
 // Call the function with the name and contact info
 generateFooter();
+
+// homepage cursor
+document.addEventListener('mousemove', function (e) {
+    document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
+    document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
+});
+
+// homepage gallery
+document.addEventListener('DOMContentLoaded', () => {
+    const galleryContainer = document.querySelector('.homepage-gallery-container');
+    const galleryContent = document.querySelector('.gallery-content');
+    const clone = galleryContent.cloneNode(true);
+    galleryContainer.appendChild(clone);
+});
