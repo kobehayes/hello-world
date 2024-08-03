@@ -5,9 +5,6 @@
   src: url('font-engravers-trace.woff2') format('woff2');
 }
 
-
-
-
 body {
   font-family: "forma-djr-display", sans-serif;
   font-style: normal;
@@ -22,7 +19,6 @@ body {
 
 .main {
   position: relative;
-  /* left and right margins */
   margin: 0 1% 0 1%;
   display: block;
   padding-top: 100px;
@@ -30,7 +26,6 @@ body {
 
 
 .page-header {
-
   word-wrap: break-word;
   width: 100%;
   max-width: 100vw;
@@ -52,11 +47,8 @@ body {
 
 }
 
-.last-line {
-  /* display: inline-block; */
-  mix-blend-mode: difference;
-}
 
+/* ------ANIMATION FOR HEADERS */
 @keyframes floatDown {
   0% {
     transform: translateY(-250%);
@@ -73,7 +65,11 @@ body {
   }
 }
 
-/* ANIMATION FOR HEADERS */
+
+.last-line {
+  /* display: inline-block; */
+  mix-blend-mode: difference;
+}
 
 .last-line,
 #typeface-header {
@@ -154,7 +150,7 @@ a:hover {
   color: #ff6200;
 }
 
-/* on page links only, adds bottom border */
+/* in-page links only, adds bottom border */
 .main a {
   color: #ffffff;
   text-decoration: none;
@@ -215,7 +211,7 @@ header {
   position: absolute;
   background-color: #000000;
   color: #ffffff;
-  padding: 9px;
+  padding: 10px;
   box-sizing: border-box;
   border: 1px solid white;
   border-radius: 17px;
@@ -258,43 +254,36 @@ h3 {
 
 
 
-/* Custom cursor */
-#home-main {
+/* -------------Custom cursor */
+/* #home-main {
   background-image: url('book-imgs/anything-graphic.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
   cursor: url('/favicon.png'), auto;
   position: relative;
-
   --cursor-x: 0;
   --cursor-y: 0;
 }
-
-
-
 #home-main::after {
   content: '';
   position: absolute;
   width: 32px;
-  /* Size of the custom cursor */
   height: 32px;
-  /* Size of the custom cursor */
   pointer-events: none;
-  /* Allow clicks to pass through */
   /* background: inherit; */
-  /* Inherit background from parent */
-  /* filter: invert(1); */
-  /* Invert colors */
-  mix-blend-mode: difference;
-  /* Ensure the inversion effect */
-}
-
-#home-main:hover::after {
+/* filter: invert(1); */
+/* Invert colors */
+/* mix-blend-mode: difference;
+} */
+/* #home-main:hover::after {
   display: block;
   left: var(--cursor-x);
   top: var(--cursor-y);
-}
+}  */
+
+
+/* ------HOMEPAGE PHOTOS------- */
 
 #homepage-photo-gallery {
   overflow: hidden;
@@ -313,13 +302,16 @@ h3 {
 }
 
 .gallery-content img {
-  width: 150px;
-  height: 150px;
-  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  /* margin-right: 10px; */
   transition: transform 0.3s ease;
+
 
   object-fit: contain;
   filter: grayscale(100%);
+  /* filter: brightness(10) contrast(50); */
+  border: 1px solid white;
 
 }
 
@@ -367,6 +359,10 @@ h3 {
 
 }
 
+.photo-carousel-container {
+  margin-bottom: 20vh;
+}
+
 /* --------------design page */
 .graphic-works {
   display: flex;
@@ -378,7 +374,8 @@ h3 {
   border-bottom: 1px solid white;
 }
 
-#animal-farm {
+
+.graphic-works:last-child {
   border: none;
 }
 
@@ -513,8 +510,9 @@ h3 {
 }
 
 #kemper .work-desc {
-  max-width: 60%;
-  text-align: left;
+  max-width: 65%;
+  text-align: justify;
+  text-indent: 2em;
 }
 
 
@@ -531,7 +529,7 @@ h3 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 3vw;
+  margin-top: 1.7vw;
   align-items: flex-start;
 
 }
