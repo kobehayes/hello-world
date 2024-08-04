@@ -120,4 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryContent = document.querySelector('.gallery-content');
     const clone = galleryContent.cloneNode(true);
     galleryContainer.appendChild(clone);
+
+    // galleryContainer.style.width = `${galleryContent.scrollWidth * 2}px`;
 });

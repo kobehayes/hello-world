@@ -34,7 +34,7 @@ body {
 
   margin-bottom: 0.2em;
   margin-top: 0;
-  line-height: 0.65;
+  line-height: 0.60;
 
   font-style: italic;
   position: relative;
@@ -53,6 +53,7 @@ body {
   0% {
     transform: translateY(-250%);
     opacity: 0;
+
   }
 
   10% {
@@ -71,17 +72,16 @@ body {
   mix-blend-mode: difference;
 }
 
+.first-line,
 .last-line,
 #typeface-header {
-  animation: floatDown 1s ease-out forwards;
+  /* animation: floatDown 1s ease-out forwards; */
+  animation: floatDown 1.3s cubic-bezier(0, 0.28, 0.26, 0.99) backwards;
 
-  animation-fill-mode: backwards;
 }
 
 .first-line {
-  animation: floatDown 0.8s ease-out forwards;
-  animation-fill-mode: backwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.4s;
 }
 
 
@@ -122,13 +122,13 @@ footer {
   background-color: #000000;
   padding: 40px;
   padding-bottom: 25px;
-
-  border-top: 5px double white;
+  border-top: 3px solid white;
 }
 
 footer p {
-  font-family: monospace;
-  font-size: 12px;
+  font-family: "forma-djr-display", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   color: white;
   text-align: right;
 
@@ -285,25 +285,40 @@ h3 {
 
 /* ------HOMEPAGE PHOTOS------- */
 
-#homepage-photo-gallery {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  position: relative;
-}
+
 
 .homepage-gallery-container {
   display: flex;
-  animation: scroll 25s linear infinite;
+  animation: scroll 20s linear infinite;
+  width: max-content;
+  justify-content: baseline;
+  border: 1px solid greenyellow;
+
+  position: relative;
 }
+
 
 .gallery-content {
   display: flex;
+  justify-content: space-evenly;
+
+  border: 1px solid pink;
+}
+
+.gallery-content a {
+
+  font-family: "forma-djr-display", sans-serif;
+  font-style: normal;
+  font-size: 2em;
+  border: 1px solid blue;
+  margin: 0 1em 0 0;
+
+  transition: transform 0.3s ease;
 }
 
 .gallery-content img {
-  width: 200px;
-  height: 200px;
+
+  height: auto;
   /* margin-right: 10px; */
   transition: transform 0.3s ease;
 
