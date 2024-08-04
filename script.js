@@ -41,9 +41,9 @@ function generateNavBar() {
             ]
         },
         {
-            text: 'About', href: 'about.html', dropdown: [
-                // { text: 'asdf', href: '#' },
-                // { text: 'asdf', href: '#' },
+            text: 'more', href: 'about.html', dropdown: [
+                // { text: 'about', href: '#' },
+                // { text: '', href: '#' },
                 // { text: 'asdf', href: '#' },
             ]
         },
@@ -93,7 +93,7 @@ function generateFooter(name, contactInfo) {
     // Set the inner HTML of the footer
     footer.innerHTML = `
         <div class="footer-content">
-            <p>Kobe Hayes</p>
+
             <p>kobehayes1@gmail.com</p>
             <p><a href="https://www.linkedin.com/in/kobehayes/">LinkedIn</a></p>
 
@@ -105,14 +105,9 @@ function generateFooter(name, contactInfo) {
     document.body.appendChild(footer);
 }
 
-// Call the function with the name and contact info
 generateFooter();
 
-// homepage cursor
-document.addEventListener('mousemove', function (e) {
-    document.documentElement.style.setProperty('--cursor-x', e.clientX + 'px');
-    document.documentElement.style.setProperty('--cursor-y', e.clientY + 'px');
-});
+
 
 // homepage gallery
 document.addEventListener('DOMContentLoaded', () => {
