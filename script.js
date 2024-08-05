@@ -1,55 +1,57 @@
 
-//                                  pages call this
+
+//-----------INPUT NAVBAR ELEMENTS HERE----
+let navItems = [
+    {
+        text: 'Kobe Hayes', href: 'index.html',
+        class: 'padded-right', id: 'nav-home', dropdown: [
+            { text: 'hi', href: '#' },
+        ]
+    },
+    {
+        text: 'Graphic Design', href: 'graphic-design.html', dropdown: [
+            { text: 'Can Anything Be Performance Art', href: 'graphic-design.html#perf-book' },
+            { text: 'AUX Magazine', href: 'graphic-design.html#aux' },
+            { text: 'Apollo 11', href: 'graphic-design.html#apollo' },
+            { text: 'Activist Art of the AIDS Crisis', href: 'graphic-design.html#alt-poster' },
+            { text: 'Animal Farm', href: 'graphic-design.html#animal-farm' },
+        ]
+    },
+
+    {
+        text: 'Time-Based', href: 'time-based.html', dropdown: [
+            { text: 'Singularity Synth', href: 'time-based.html#kemper' },
+            { text: 'Bounce Back from Burnout', href: 'time-based.html#motion1' },
+            { text: 'How does sound work?', href: 'time-based.html#motionfinal' },
+            { text: 'Music\'s Elite Seat', href: 'time-based.html#motion2' },
+
+
+        ]
+    },
+    {
+        text: 'Photography', href: 'photography.html', dropdown: [
+            { text: '35mm Photography', href: 'photography.html#bw-photos' },
+            { text: 'Digital Photography', href: 'photography.html#digital-photos' },
+
+        ]
+    },
+    {
+        text: 'Typeface', href: 'typeface.html', dropdown: [
+            { text: 'Process', href: 'typeface.html#process' },
+            // { text: 'Sketches', href: 'typeface.html#sketches' },
+
+        ]
+    },
+    {
+        text: 'More', href: 'about.html', dropdown: [
+            // { text: 'About', href: '#' },
+            // { text: 'More Artwork', href: '#' },
+            // { text: 'Music + Sound Design', href: '#' },
+        ]
+    },
+
+];
 function generateNavBar() {
-
-    //-----------INPUT NAVBAR ELEMENTS HERE----
-    let navItems = [
-        {
-            text: 'Kobe Hayes', href: 'index.html',
-            class: 'padded-right'
-        },
-        {
-            text: 'Graphic Design', href: 'graphic-design.html', dropdown: [
-                { text: 'Can Anything Be Performance Art', href: 'graphic-design.html#perf-book' },
-                { text: 'AUX Magazine', href: 'graphic-design.html#aux' },
-                { text: 'Apollo 11', href: 'graphic-design.html#apollo' },
-                { text: 'Activist Art of the AIDS Crisis', href: 'graphic-design.html#alt-poster' },
-                { text: 'Animal Farm', href: 'graphic-design.html#animal-farm' },
-            ]
-        },
-
-        {
-            text: 'Time-Based', href: 'time-based.html', dropdown: [
-                { text: 'Singularity Synth', href: 'time-based.html#kemper' },
-                { text: 'Music\'s Elite Seat', href: 'time-based.html#motion2' },
-                { text: 'How does sound work?', href: 'time-based.html#motionfinal' },
-                { text: 'Bounce Back from Burnout', href: 'time-based.html#motion1' },
-            ]
-        },
-        {
-            text: 'Photography', href: 'photography.html', dropdown: [
-                { text: '35mm Photography', href: 'photography.html#bw-photos' },
-                { text: 'Digital Photography', href: 'photography.html#digital-photos' },
-
-            ]
-        },
-        {
-            text: 'Typeface', href: 'typeface.html', dropdown: [
-                { text: 'Process', href: 'typeface.html#process' },
-                // { text: 'Sketches', href: 'typeface.html#sketches' },
-
-            ]
-        },
-        {
-            text: 'more', href: 'about.html', dropdown: [
-                // { text: 'about', href: '#' },
-                // { text: '', href: '#' },
-                // { text: 'asdf', href: '#' },
-            ]
-        },
-
-    ];
-
     let navBar = document.getElementById('navbar');
 
     for (let item of navItems) {
@@ -108,13 +110,32 @@ function generateFooter(name, contactInfo) {
 generateFooter();
 
 
-
 // homepage gallery
-document.addEventListener('DOMContentLoaded', () => {
-    const galleryContainer = document.querySelector('.homepage-gallery-container');
-    const galleryContent = document.querySelector('.gallery-content');
-    const clone = galleryContent.cloneNode(true);
-    galleryContainer.appendChild(clone);
+// document.addEventListener('DOMContentLoaded', () => {
+//     const galleryContainer = document.querySelector('.homepage-gallery-container');
+//     const galleryContent = document.querySelector('.gallery-content');
 
-    // galleryContainer.style.width = `${galleryContent.scrollWidth * 2}px`;
+//     if (galleryContainer && galleryContent) {
+//         const clone = galleryContent.cloneNode(true);
+//         galleryContainer.appendChild(clone);
+//     }
+// });
+
+// apollo embed
+document.addEventListener('DOMContentLoaded', () => {
+    const embedButton = document.getElementById('apollo-embed-button');
+    const closeButton = document.getElementById('apollo-x-button');
+    const overlay = document.getElementById('apollo-embed-div');
+
+    if (embedButton && overlay) {
+        embedButton.addEventListener('click', function () {
+            overlay.style.display = 'flex';
+        });
+    }
+
+    if (closeButton && overlay) {
+        closeButton.addEventListener('click', function () {
+            overlay.style.display = 'none';
+        });
+    }
 });

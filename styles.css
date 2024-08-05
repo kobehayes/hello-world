@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 @font-face {
   font-family: 'Fadriar';
-  src: url('font-fadriar.woff2') format('woff2');
+  src: url('fonts/font-fadriar.woff2') format('woff2');
   font-family: 'Engravers';
-  src: url('font-engravers-trace.woff2') format('woff2');
+  src: url('fonts/font-engravers-trace.woff2') format('woff2');
 }
+
+
 
 html,
 body {
@@ -18,9 +22,31 @@ body {
   padding: 0;
   max-width: 100vw;
   overflow-x: hidden;
-
 }
 
+p {
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.7;
+}
+
+header {
+  width: 100%;
+}
+
+h3 {
+  font-weight: 200;
+
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.padded-right {
+  padding-right: 200px;
+}
 
 .main {
   position: relative;
@@ -28,7 +54,6 @@ body {
   display: block;
   padding-top: 100px;
 }
-
 
 .page-header {
   word-wrap: break-word;
@@ -49,8 +74,43 @@ body {
 
   flex-direction: column;
   mix-blend-mode: difference;
-
 }
+
+.work-info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title-and-date {
+  display: block;
+}
+
+.work-title {
+  font-size: 5vw;
+  margin-top: 0;
+  margin-bottom: 1vw;
+  font-weight: 200;
+}
+
+.work-date {
+  font-size: 2em;
+  font-style: italic;
+  margin: 0;
+  align-self: flex-end;
+  margin-bottom: 1vw;
+}
+
+.work-desc {
+  max-width: 50%;
+  text-align: right;
+}
+
+
+
+
 
 
 /* ------ANIMATION FOR HEADERS */
@@ -88,19 +148,9 @@ body {
   }
 }
 
-
-/* .first-line,
-.last-line,
-#typeface-header,
-#navbar {
-  animation: floatDown 1.3s cubic-bezier(0, 0.28, 0.26, 0.99) backwards;
-} */
-
-
 .first-line {
   animation: floatDown 1.1s cubic-bezier(0, 0.28, 0.26, 0.99) backwards;
   animation-delay: 0.3s;
-
 }
 
 .last-line {
@@ -108,8 +158,10 @@ body {
 
   animation: floatDown 1.2s cubic-bezier(0, 0.28, 0.26, 0.99) backwards;
   animation-delay: 0.7s;
-
 }
+
+
+/* -------FOOTER AND NAVBAR ANIMATIONS------- */
 
 footer {
   animation: floatUp 1.4s cubic-bezier(0, 0.28, 0.26, 0.99) backwards;
@@ -122,7 +174,7 @@ footer {
   animation-delay: 1.1s;
 }
 
-/* ANIMATION DELAY: starting time of the animation, th4 other one iw velocity */
+/* ANIMATION DELAY: starting time of the animation, the other one is velocity */
 
 
 /* #typeface-header {
@@ -155,15 +207,39 @@ footer {
 
 
 
-p {
-  font-family: monospace;
-  font-size: 18px;
-  line-height: 1.7;
+
+
+/* -------------HEADER AND FOOTER------------ */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+#nav-home .dropdown {
+  display: none;
+}
+
+/* navbar labels */
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 footer {
+  margin-top: 2em;
   display: flex;
-
   position: relative;
   bottom: 0;
   left: 0;
@@ -193,52 +269,24 @@ footer p {
   text-align: center;
 }
 
-/* ------------------ALL LINKS */
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.4s, opacity 0.2s ease-in-out;
 
-/* default link state, all navbar links */
-a {
-  text-decoration: none;
+  position: absolute;
+  background-color: #000000;
   color: #ffffff;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #ff6200;
-}
-
-/* in-page links only, adds bottom border */
-.main a {
-  color: #ffffff;
-  text-decoration: none;
-  border-bottom: 2px dotted #ffffff;
-  padding-bottom: 2px;
-
-}
-
-.main a:hover {
-  color: #ff6200;
-  border-bottom: 5px dotted rgb(255, 98, 0);
-}
-
-header {
-  width: 100%;
-}
-
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 5rem;
-  position: fixed;
+  padding: 10px;
   box-sizing: border-box;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  width: 100%;
-  background-color: black;
-  border-bottom: 1px solid white;
+  border: 1px solid white;
+  border-radius: 17px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* --------DROPDOWN ANIMATION--------- */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -259,54 +307,43 @@ header {
   }
 }
 
-.dropdown {
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s 0.4s, opacity 0.2s ease-in-out;
 
-  position: absolute;
-  background-color: #000000;
+
+
+/* ------------------ALL LINKS */
+
+/* default link state, all navbar links */
+a {
+  text-decoration: none;
   color: #ffffff;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid white;
-  border-radius: 17px;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff6200;
+}
+
+/* in-page links only, adds bottom border */
+.main a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 2px dotted #ffffff;
+  padding-bottom: 2px;
+}
+
+.main a:hover {
+  color: #ff6200;
+  border-bottom: 5px dotted rgb(255, 98, 0);
 }
 
 
 
-/* actual navbar labels */
 
-.nav-item:hover .dropdown {
 
-  opacity: 1;
-  visibility: visible;
-  transition-delay: 0s;
 
-}
 
-h3 {
-  font-weight: 200;
-  font-size: 30px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  margin-top: 50px;
-}
 
-.padded-right {
-  padding-right: 200px;
 
-}
-
-/* identify the first nav-item within nav-bar to add padding on right side of my name  */
-
-/* HOME PAGE----------- */
-#home-header {
-  mix-blend-mode: difference;
-}
 
 
 
@@ -314,62 +351,45 @@ h3 {
 
 /* ------HOMEPAGE PHOTOS------- */
 
-
-
-.homepage-gallery-container {
+/* .homepage-gallery-container {
   display: flex;
   animation: scroll 20s linear infinite;
   width: max-content;
   justify-content: baseline;
   border: 1px solid greenyellow;
-
   position: relative;
 }
-
-
 .gallery-content {
   display: flex;
   justify-content: space-evenly;
-
   border: 1px solid pink;
 }
-
 .gallery-content a {
-
   font-family: "forma-djr-display", sans-serif;
   font-style: normal;
   font-size: 2em;
   border: 1px solid blue;
   margin: 0 1em 0 0;
-
   transition: transform 0.3s ease;
 }
-
 .gallery-content img {
-
   height: auto;
-  /* margin-right: 10px; */
+   margin-right: 10px; 
   transition: transform 0.3s ease;
-
-
   object-fit: contain;
   filter: grayscale(100%);
-  /* filter: brightness(10) contrast(50); */
+  filter: brightness(10) contrast(50); 
   border: 1px solid white;
-
 }
-
 .homepage-gallery-container:hover {
   animation-play-state: paused;
 }
-
 .gallery-content img:hover {
   transform: scale(1.2);
   filter: none;
-  /* Scale up the image */
-}
-
-@keyframes scroll {
+   Scale up the image 
+}*/
+/* @keyframes scroll {
   0% {
     transform: translateX(100%);
   }
@@ -377,7 +397,7 @@ h3 {
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 
 
@@ -390,8 +410,6 @@ h3 {
   display: flex;
   overflow-x: scroll;
   white-space: nowrap;
-
-
 }
 
 #bw-carousel img,
@@ -400,14 +418,15 @@ h3 {
   flex: 8;
   height: 70vh;
   object-fit: cover;
-
 }
 
 .photo-carousel-container {
   margin-bottom: 20vh;
 }
 
-/* --------------design page */
+
+
+/* --------------design page---------------- */
 .graphic-works {
   display: flex;
   justify-content: space-between;
@@ -418,41 +437,8 @@ h3 {
   border-bottom: 1px solid white;
 }
 
-
 .graphic-works:last-child {
   border: none;
-}
-
-.work-info {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.title-and-date {
-  display: block;
-}
-
-.work-title {
-  font-size: 5vw;
-  margin-top: 0;
-  margin-bottom: 1vw;
-  font-weight: 200;
-}
-
-.work-date {
-  font-size: 2em;
-  font-style: italic;
-  margin: 0;
-  align-self: flex-end;
-  margin-bottom: 1vw;
-}
-
-.work-desc {
-  max-width: 50%;
-  text-align: right;
 }
 
 #book-front-cover {
@@ -462,7 +448,9 @@ h3 {
   object-fit: contain;
 }
 
-/* aux carousels------- */
+
+
+/* ---------aux carousels------- */
 
 #aux {
   flex-direction: column;
@@ -472,9 +460,7 @@ h3 {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-
 }
-
 
 .aux-carousels img {
   height: 80vh;
@@ -489,14 +475,12 @@ h3 {
   align-items: center;
   margin-bottom: 30px;
   justify-content: space-between;
-
 }
 
 .carousel-controls {
   display: flex;
   justify-content: space-between;
   margin-top: 1vh;
-
 }
 
 .carousel-controls button {
@@ -512,12 +496,38 @@ h3 {
 }
 
 
+
+
+/* -----------APOLLO EMBED-------------- */
+
 #apollo-embed-div {
   display: none;
-  position: relative;
-  /* width: 900px;
-  height: 100%; */
-  border: 1px solid white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+#apollo-embed {
+  width: 80vw;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#apollo-x-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* bottom three works in gd page */
@@ -544,8 +554,11 @@ h3 {
 }
 
 
-/* TIME BASED---------------- */
 
+
+
+
+/* ------------------TIME BASED---------------- */
 
 #kemper {
   display: flex;
@@ -553,13 +566,16 @@ h3 {
   flex-wrap: wrap;
 }
 
+#kemper p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 #kemper .work-desc {
   max-width: 65%;
   text-align: justify;
   text-indent: 2em;
 }
-
-
 
 #kemper-main-photo {
   width: 100%;
@@ -575,7 +591,6 @@ h3 {
   justify-content: center;
   margin-top: 1.7vw;
   align-items: flex-start;
-
 }
 
 .kemper-vertical {
@@ -592,16 +607,14 @@ h3 {
   object-fit: contain;
 }
 
-
-
+/* ---------------------------- */
 .motion-graphics {
-
   height: 100vh;
 }
 
-#motion-subhead {
+/* #motion-subhead {
   font-size: 4em;
-}
+} */
 
 .motion-graphics div {
   padding: 30px;
@@ -612,7 +625,10 @@ h3 {
   scroll-snap-align: start;
   scroll-margin: 50px;
   border-bottom: 1px solid white;
+}
 
+.motion-graphics .work-date {
+  align-self: auto;
 }
 
 .motion-graphics div:last-child {
@@ -626,8 +642,6 @@ h3 {
   align-items: flex-start;
 }
 
-
-
 .motion-graphics .work-desc {
   max-width: fit-content;
   text-align: left;
@@ -637,7 +651,14 @@ h3 {
   margin-top: -500px;
 }
 
-/* -------------------typeface */
+
+
+
+
+
+
+
+/* -------------------typeface------------------ */
 
 .process {
   display: inline-block;
@@ -647,15 +668,9 @@ h3 {
 .process span {
   display: flex;
   justify-content: space-between;
-
   margin-bottom: 20px;
   margin-top: 3em;
-
-  /* scroll-snap-align: center;
-  scroll-snap-type: y mandatory; */
-
   border-top: 1px solid white;
-
 }
 
 .typeface-body {
@@ -671,15 +686,19 @@ h3 {
   height: 600px;
 }
 
-/* ------ABOUT---- */
+
+
+
+
+
+
+/* -----------------------ABOUT----------------------- */
 #entire-about-page {
   margin: 0 5em;
-
 }
 
 #about-header {
   display: flex;
-
 }
 
 #headshot {
