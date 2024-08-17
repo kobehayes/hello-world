@@ -1,6 +1,3 @@
-
-
-//-----------INPUT NAVBAR ELEMENTS HERE----
 let navItems = [
     {
         text: 'Kobe Hayes', href: 'index.html',
@@ -15,15 +12,16 @@ let navItems = [
             { text: 'Apollo 11', href: 'graphic-design.html#apollo' },
             { text: 'Activist Art of the AIDS Crisis', href: 'graphic-design.html#alt-poster' },
             { text: 'Animal Farm', href: 'graphic-design.html#animal-farm' },
+            { text: 'This portfolio!', href: 'graphic-design.html#port-ss' },
         ]
     },
 
     {
         text: 'Time-Based', href: 'time-based.html', dropdown: [
             { text: 'Singularity Synth', href: 'time-based.html#kemper' },
-            { text: 'Bounce Back from Burnout', href: 'time-based.html#motion1' },
-            { text: 'How does sound work?', href: 'time-based.html#motionfinal' },
-            { text: 'Music\'s Elite Seat', href: 'time-based.html#motion2' },
+            { text: 'Bounce Back from Burnout', href: 'time-based.html#bounce-back' },
+            { text: 'How does sound work?', href: 'time-based.html#how-does-sound-work' },
+            { text: 'Music\'s Elite Seat', href: 'time-based.html#elite-seat' },
 
 
         ]
@@ -44,9 +42,9 @@ let navItems = [
     },
     {
         text: 'More', href: 'about.html', dropdown: [
-            // { text: 'About', href: '#' },
-            // { text: 'More Artwork', href: '#' },
-            // { text: 'Music + Sound Design', href: '#' },
+            { text: 'Wheatpasting in Chinatown', href: 'about.html#wheatpasting' },
+            { text: 'Tallmind', href: 'about.html#tallmind' },
+            { text: 'Infatuation of a Queer Youth', href: 'about.html#kp-drawing' },
         ]
     },
 
@@ -103,7 +101,6 @@ function generateFooter(name, contactInfo) {
         </div>
     `;
 
-    // Append the footer to the body
     document.body.appendChild(footer);
 }
 

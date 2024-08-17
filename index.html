@@ -17,14 +17,28 @@
       height: 100vh;
       background-image: url('book-imgs/anything-graphic.svg');
       background-size: cover;
-      /* Ensures the image covers the entire background */
-      background-position: center;
-      /* Centers the image */
-      background-repeat: no-repeat;
-      /* Prevents the image from repeating */
+      background-position: 0px 30px;
+      background-repeat: repeat;
+      animation: moveBackground 60s linear infinite;
+
     }
 
-    #image-cont {
+    @keyframes moveBackground {
+      0% {
+        background-position: 0px 30px;
+      }
+
+      100% {
+        background-position: -100vw 30px;
+      }
+    }
+
+    #home-desc {
+      mix-blend-mode: difference;
+    }
+
+
+    /* #image-cont {
       box-sizing: border-box;
       padding: 0;
       width: 100%;
@@ -41,12 +55,16 @@
       object-fit: cover;
       position: relative;
       overflow: hidden;
-    }
+    } */
 
     /* homepage animations */
-    #carousel-image {
+    /* #carousel-image {
       position: absolute;
       transition: left 0.5s ease-in-out;
+    } */
+
+    footer {
+      position: fixed;
     }
   </style>
 </head>

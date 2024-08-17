@@ -37,7 +37,6 @@ header {
 
 h3 {
   font-weight: 200;
-
   font-size: 30px;
   margin-left: 30px;
   margin-bottom: 30px;
@@ -553,7 +552,9 @@ a:hover {
   box-sizing: border-box;
 }
 
-
+#port-ss {
+  border: 1px solid white;
+}
 
 
 /* ------------------TIME BASED---------------- */
@@ -620,7 +621,7 @@ a:hover {
   justify-content: space-between;
 
   min-height: 80vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   scroll-margin: 50px;
   border-bottom: 1px solid white;
 }
@@ -691,15 +692,56 @@ a:hover {
 
 
 /* -----------------------ABOUT----------------------- */
-#entire-about-page {
-  margin: 0 5em;
+#about-title {
+  text-align: center;
+  font-style: normal;
+  font-size: 7em;
+  margin-bottom: 7%;
 }
 
-#about-header {
+
+#about-header,
+#about p {
+  padding: 0 5%;
   display: flex;
 }
 
+#about-header h2 {
+  font-size: 4em;
+}
+
 #headshot {
-  height: 30vh;
+  margin-left: auto;
+  margin-right: 3%;
+  height: 35vh;
   width: auto;
+}
+
+
+
+#more h1 {
+  font-size: 6.5em;
+  margin-top: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.more-artwork {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 30px;
+  border-bottom: 1px solid white;
+}
+
+.more-artwork:last-child {
+  border: none;
+}
+
+.more-artwork img {
+  width: auto;
+  height: 90vh;
 }
