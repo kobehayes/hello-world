@@ -2,9 +2,11 @@
 
 
 @font-face {
-  font-family: 'Fadriar';
+  font-family: 'fadriar';
   src: url('fonts/font-fadriar.woff2') format('woff2');
-  src: url('fonts/font-fadriar.otf') format('otf');
+  src: url('fonts/fadriar.otf') format('otf');
+  src: url('fonts/font-fadriar.ttf') format('ttf');
+  /* font-weight: 1 1000; */
 
   font-family: 'Engravers';
   src: url('fonts/font-engravers-trace.woff2') format('woff2');
@@ -13,6 +15,11 @@
 html,
 body {
   height: 100%;
+}
+
+.fadriar {
+  font-family: 'fadriar', serif;
+  font-size: larger;
 }
 
 body {
