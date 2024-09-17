@@ -16,6 +16,14 @@ let navItems = [
         ]
     },
 
+
+    {
+        text: 'Photography', href: 'photography.html', dropdown: [
+            { text: '35mm Photography', href: 'photography.html#bw-photos' },
+            { text: 'Digital Photography', href: 'photography.html#digital-photos' },
+
+        ]
+    },
     {
         text: 'Time-Based', href: 'time-based.html', dropdown: [
             { text: 'Singularity Synth', href: 'time-based.html#kemper' },
@@ -27,7 +35,7 @@ let navItems = [
         ]
     },
     {
-        text: 'Photography', href: 'photography.html', dropdown: [
+        text: 'Music', href: 'music.html', dropdown: [
             { text: '35mm Photography', href: 'photography.html#bw-photos' },
             { text: 'Digital Photography', href: 'photography.html#digital-photos' },
 

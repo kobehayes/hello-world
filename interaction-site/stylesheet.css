@@ -1,0 +1,136 @@
+body {
+    font-size: 16px;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    margin: 0 3%;
+}
+
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    /* Ensure the navbar is at the top */
+    left: 0;
+    /* Ensure the navbar starts from the left */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    margin: 0;
+    /* Remove any margin */
+    padding: 16px 0;
+    /* Remove any padding */
+    z-index: 1000;
+    /* Ensure the navbar is above other elements */
+}
+
+nav a {
+    font-family: "octin-college", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-family: "octin-college", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    color: rgb(255, 179, 39);
+    text-decoration: none;
+
+}
+
+h1 {
+    font-size: 6.25em;
+    font-family: "octin-college", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5%;
+    margin-left: 3%;
+
+    text-align: left;
+
+}
+
+.body-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    padding: 25px 50px;
+
+    box-sizing: border-box;
+}
+
+p {
+    text-align: left;
+    font-family: "source-sans-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+
+    padding: 0 20px;
+
+}
+
+.next {
+    width: auto;
+    height: auto;
+    /* display: flex;
+
+    align-items: center; */
+    background-color: rgba(0, 0, 0, 0.01);
+    backdrop-filter: blur(15px);
+    padding: 0.625em;
+
+}
+
+.next:hover {
+    visibility: visible;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.next a {
+    text-decoration: none;
+    color: white;
+}
+
+.next-arrow {
+    font-size: 24px;
+    color: rgb(255, 179, 39);
+}
+
+#the-three {
+    width: 400px;
+    height: auto;
+}
+
+#personnel-page img {
+    width: 26vw;
+    height: auto;
+}
+
+h2 {
+
+    font-size: 2em;
+    text-align: left;
+    font-family: "source-sans-pro", sans-serif;
+    font-weight: 600px;
+    margin: 0 7px;
+}
