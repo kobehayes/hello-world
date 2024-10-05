@@ -36,8 +36,8 @@ let navItems = [
     },
     {
         text: 'Music', href: 'music.html', dropdown: [
-            { text: '35mm Photography', href: 'photography.html#bw-photos' },
-            { text: 'Digital Photography', href: 'photography.html#digital-photos' },
+            { text: 'Synthesis', href: 'music.html#synthesis' },
+            { text: 'Recordings', href: 'music.html#recordings' },
 
         ]
     },
@@ -50,9 +50,9 @@ let navItems = [
     },
     {
         text: 'More', href: 'about.html', dropdown: [
-            { text: 'Wheatpasting in Chinatown', href: 'about.html#wheatpasting' },
-            { text: 'Tallmind', href: 'about.html#tallmind' },
-            { text: 'Infatuation of a Queer Youth', href: 'about.html#kp-drawing' },
+            { text: 'About Me', href: 'about.html#about' },
+            { text: 'More of my work', href: 'about.html#more' },
+
         ]
     },
 
