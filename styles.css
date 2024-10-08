@@ -18,10 +18,14 @@
   font-style: normal;
 }
 
+
+
 html,
 body {
   height: 100%;
 }
+
+
 
 
 
@@ -69,7 +73,7 @@ h3 {
   word-wrap: break-word;
   width: 100%;
   max-width: 100vw;
-  font-size: 20em;
+  font-size: 22vw;
   font-weight: bold;
 
   margin-bottom: 0.2em;
@@ -85,6 +89,9 @@ h3 {
   flex-direction: column;
   mix-blend-mode: difference;
 }
+
+
+/* --------------------------------- */
 
 .work-info {
   display: flex;
@@ -189,6 +196,7 @@ footer {
 
 /* -------------HEADER AND FOOTER------------ */
 
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -264,6 +272,8 @@ footer p {
   flex-direction: column;
 }
 
+
+
 /* --------DROPDOWN ANIMATION--------- */
 @keyframes fadeIn {
   from {
@@ -311,7 +321,7 @@ a:hover {
 
 .main a:hover {
   color: #ff6200;
-  border-bottom: 5px dotted rgb(255, 98, 0);
+  border-bottom: 5px dotted #ff6200;
 }
 
 
@@ -445,6 +455,7 @@ a:hover {
   box-sizing: border-box;
 }
 
+/* portfolio screenshot */
 #port-ss {
   border: 1px solid white;
 }
@@ -470,8 +481,8 @@ a:hover {
 }
 
 #kemper-main-photo {
-  width: 100%;
-  height: 55vh;
+  width: 100vw;
+  height: auto;
   object-fit: cover;
 }
 
@@ -539,9 +550,7 @@ a:hover {
   text-align: left;
 }
 
-.time-based-main video {
-  margin-top: -500px;
-}
+
 
 /* ----------------PHOTOGRAPHY---------------- */
 #bw-carousel,
@@ -563,7 +572,7 @@ a:hover {
   margin-bottom: 20vh;
 }
 
-/* ------------------SOUND---------------------- */
+/* ------------------MUSIC---------------------- */
 
 #music-main {
 

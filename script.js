@@ -57,6 +57,8 @@ let navItems = [
     },
 
 ];
+
+
 function generateNavBar() {
     let navBar = document.getElementById('navbar');
 
@@ -115,15 +117,13 @@ function generateFooter(name, contactInfo) {
 generateFooter();
 
 
-// homepage gallery
-// document.addEventListener('DOMContentLoaded', () => {
-//     const galleryContainer = document.querySelector('.homepage-gallery-container');
-//     const galleryContent = document.querySelector('.gallery-content');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const hamburger = document.getElementById('hamburger');
+//     const menuItems = document.querySelector('.menu-items');
 
-//     if (galleryContainer && galleryContent) {
-//         const clone = galleryContent.cloneNode(true);
-//         galleryContainer.appendChild(clone);
-//     }
+//     hamburger.addEventListener('click', function () {
+//         menuItems.classList.toggle('active');
+//     });
 // });
 
 // apollo embed

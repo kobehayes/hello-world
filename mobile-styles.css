@@ -1,0 +1,172 @@
+/* BOTH MOBILE AND TABLET */
+@media (max-width: 991px) {}
+
+/* ONLY MOBILE */
+@media (max-width: 767px) {
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .main {
+        position: relative;
+        margin: 0 3px 0 3px;
+        display: block;
+        padding-top: 50px;
+
+    }
+
+    .page-header {
+        font-size: 6rem;
+        /* Set a base font size */
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        text-align: left;
+        overflow: hidden;
+        width: 90vw;
+        /* Set the width to 90% of the viewport width */
+        transform: scale(1);
+        /* Ensure the text scales correctly */
+        transform-origin: left;
+        /* Scale from the left side */
+    }
+
+    .work-info {
+        padding: 0 2px;
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+    }
+
+    .work-title {
+
+        font-size: 2.5rem;
+
+    }
+
+    .work-date {}
+
+    .work-desc {
+        max-width: 100%;
+        text-align: left;
+        font-size: 1rem;
+    }
+
+
+    /* GRAPHIC DESIGN PAGE */
+    .graphic-works {}
+
+    .aux-carousels img {
+        margin: 0;
+        width: 100vw;
+        height: auto;
+    }
+
+    #alt-img-container {
+        display: block;
+        margin: 0;
+        width: 100vw;
+
+
+    }
+
+    #alt-1,
+    #alt-2 {
+        width: 100vw;
+        height: auto;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+    }
+
+
+    /* bottom three works in gd page */
+    .graphic-design-img {
+        width: 100vw;
+        height: auto;
+        margin: 0;
+    }
+
+
+    /*  PHOTOGRAPHY */
+
+    #all-photos img {
+        border: 10px solid white;
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* TIME-BASED */
+
+    #time-based-main {
+        display: block;
+        overflow-x: hidden;
+        width: 100vw;
+
+    }
+
+    #kemper {
+        display: block;
+    }
+
+    #kemper .work-desc {
+        max-width: none;
+        text-align: left;
+        text-indent: 0;
+    }
+
+    #time-based-main img,
+    #time-based-main video,
+    #kemper-photo-grid img,
+    .kemper-vertical,
+    .kemper-landscape,
+    #kemper-main-photo,
+    .time-based-main video,
+    .kemper-graphic-works {
+        display: block;
+        width: 100vw;
+        height: auto;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .motion-graphics div {
+        display: block;
+        padding: 0;
+    }
+
+    .motion-text {
+        display: block;
+        padding: 0 10px;
+    }
+
+    /* MUSIC */
+
+    #music-main {
+        width: 100vw;
+        overflow-x: hidden;
+
+
+        .section-title {
+            font-size: 3.7rem;
+            margin: 0;
+            word-wrap: normal;
+        }
+
+        #silo .work-desc {
+            max-width: 100vw;
+            margin-bottom: 0;
+        }
+
+    }
+
+
+}
+
+/* ONLY TABLET */
+@media only screen and (min-width: 768px) and (max-width: 991px) {}
