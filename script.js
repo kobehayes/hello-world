@@ -2,7 +2,7 @@ let navItems = [
     {
         text: 'Kobe Hayes', href: 'index.html',
         class: 'padded-right', id: 'nav-home', dropdown: [
-            { text: 'hi', href: '#' },
+            { text: 'hello!', href: '#' },
         ]
     },
     {
@@ -25,19 +25,19 @@ let navItems = [
         ]
     },
     {
-        text: 'Time-Based', href: 'time-based.html', dropdown: [
-            { text: 'Singularity Synth', href: 'time-based.html#kemper' },
-            { text: 'Bounce Back from Burnout', href: 'time-based.html#bounce-back' },
-            { text: 'How does sound work?', href: 'time-based.html#how-does-sound-work' },
-            { text: 'Music\'s Elite Seat', href: 'time-based.html#elite-seat' },
+        text: 'Video', href: 'video.html', dropdown: [
+            { text: 'Singularity Synth', href: 'video.html#kemper' },
+            { text: 'Bounce Back from Burnout', href: 'video.html#bounce-back' },
+            { text: 'How does sound work?', href: 'video.html#how-does-sound-work' },
+            { text: 'Music\'s Elite Seat', href: 'video.html#elite-seat' },
 
 
         ]
     },
     {
-        text: 'Music', href: 'music.html', dropdown: [
-            { text: 'Synthesis', href: 'music.html#synthesis' },
-            { text: 'Recordings', href: 'music.html#recordings' },
+        text: 'Audio', href: 'audio.html', dropdown: [
+            { text: 'Synthesis', href: 'audio.html#synthesis' },
+            { text: 'Recordings', href: 'audio.html#recordings' },
 
         ]
     },
@@ -50,7 +50,7 @@ let navItems = [
     },
     {
         text: 'More', href: 'about.html', dropdown: [
-            { text: 'About Me', href: 'about.html#about' },
+            { text: 'About me', href: 'about.html#about' },
             { text: 'More of my work', href: 'about.html#more' },
 
         ]

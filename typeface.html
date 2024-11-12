@@ -202,11 +202,24 @@
             <h2 class="fadriar">Sketches</h2>
             <p>Here are some sketches:</p>
         </div> -->
+
+        <section class="bottom-nav-buttons-container">
+            <button class="bottom-nav-buttons" id="typeface-back">&lt; audio</button>
+            <button class="bottom-nav-buttons" id="typeface-next">more &gt;</button>
+
+        </section>
     </section>
     <!-- ------------------- -->
     <!-- <script src="p5.js"></script> -->
     <script src="script.js"></script>
     <script>
+        document.getElementById('typeface-back').addEventListener('click', function () {
+            window.location.href = 'audio.html';
+        });
+        document.getElementById('typeface-next').addEventListener('click', function () {
+            window.location.href = 'about.html';
+        });
+
         generateNavBar();
 
     </script>

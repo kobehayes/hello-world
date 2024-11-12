@@ -328,6 +328,56 @@ a:hover {
 
 
 
+
+
+/* -------------------BOTTOM NAV BUTTONS--------------- */
+
+.bottom-nav-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* only for home page */
+#home-main .bottom-nav-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* Reset default button styling */
+.bottom-nav-buttons-container button {
+  background: none;
+  outline: none;
+}
+
+/* Custom styles for the button */
+.bottom-nav-buttons {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+
+  border-radius: 1px;
+
+  padding: 10px 20px;
+  margin: 20px;
+
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#home-to-graphicdesign-btn {
+  mix-blend-mode: difference;
+
+}
+
+.bottom-nav-buttons:hover {
+  color: #ff6200;
+  border: 1px solid #ff6200;
+}
+
+
 /* --------------design page---------------- */
 .graphic-works {
   display: flex;
@@ -572,9 +622,9 @@ a:hover {
   margin-bottom: 20vh;
 }
 
-/* ------------------MUSIC---------------------- */
+/* ------------------audio---------------------- */
 
-#music-main {
+#audio-main {
 
   .section-title {
     font-size: 8em;
@@ -591,7 +641,7 @@ a:hover {
     margin: 0;
   }
 
-  .music-works {
+  .audio-works {
     display: block;
   }
 

@@ -92,12 +92,23 @@
             <img src="more_art/fame_drawing.jpeg">
         </span>
         </span>
+        <section class="bottom-nav-buttons-container">
+            <button class="bottom-nav-buttons" id="more-back">&lt; typeface</button>
+            <button class="bottom-nav-buttons" id="more-next">home</button>
 
+        </section>
 
     </section>
     <script src="p5.js"></script>
     <script src="script.js"></script>
     <script>
+
+        document.getElementById('more-back').addEventListener('click', function () {
+            window.location.href = 'typeface.html';
+        });
+        document.getElementById('more-next').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
         generateNavBar();
 
     </script>

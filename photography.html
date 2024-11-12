@@ -40,6 +40,12 @@
         </div>
 
     </span>
+
+    <section class="bottom-nav-buttons-container">
+        <button class="bottom-nav-buttons" id="photography-back">&lt; graphic design</button>
+        <button class="bottom-nav-buttons" id="photography-next">video &gt;</button>
+
+    </section>
 </section>
 <!-- ------------------- -->
 <script src="p5.js"></script>
@@ -86,7 +92,12 @@
 
 
     };
-
+    document.getElementById('photography-back').addEventListener('click', function () {
+        window.location.href = 'graphic-design.html';
+    });
+    document.getElementById('photography-next').addEventListener('click', function () {
+        window.location.href = 'video.html';
+    });
 
     generateNavBar();
 

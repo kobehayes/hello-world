@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/mzx0vll.css">
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <title>
-        Time-Based - KOBE HAYES
+        Video - KOBE HAYES
     </title>
 
 </head>
@@ -22,9 +22,9 @@
     </header>
 
 
-    <section class="main" id="time-based-main">
-        <h1 class="page-header" id="time-based-header"><span class="first-line">TIME-</span>
-            <span class="last-line">BASED</span>
+    <section class="main" id="video-main">
+        <h1 class="page-header" id="video-header"><span class="first-line">VIDEO</span>
+            <!-- <span class="last-line">BASED</span> -->
         </h1>
 
         <!-- interactive kemper -->
@@ -94,11 +94,24 @@
 
         </span>
 
+        <section class="bottom-nav-buttons-container">
+            <button class="bottom-nav-buttons" id="video-back">&lt; photography</button>
+            <button class="bottom-nav-buttons" id="video-next">audio &gt;</button>
+
+        </section>
     </section>
     <!-- ------------------- -->
 
     <script src="script.js"></script>
     <script>
+
+        document.getElementById('video-back').addEventListener('click', function () {
+            window.location.href = 'photography.html';
+        });
+        document.getElementById('video-next').addEventListener('click', function () {
+            window.location.href = 'audio.html';
+        });
+
         generateNavBar();
 
     </script>

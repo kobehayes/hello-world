@@ -38,6 +38,8 @@
 
     #home-desc {
       mix-blend-mode: difference;
+      margin-bottom: 0;
+      font-size: 2.5rem;
     }
 
 
@@ -60,13 +62,19 @@
       </h1>
       <h3 id="home-desc">multimedia artist and graphic designer</h3>
     </div>
+    <section class="bottom-nav-buttons-container">
+      <button class="bottom-nav-buttons" id="home-to-graphicdesign-btn"> graphic design &gt;</button>
 
+    </section>
   </section>
+
 
 
   <script src="script.js"></script>
   <script>
-
+    document.getElementById('home-to-graphicdesign-btn').addEventListener('click', function () {
+      window.location.href = 'graphic-design.html';
+    });
     generateNavBar();
 
   </script>

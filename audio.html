@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/mzx0vll.css">
     <link rel="icon" type="image/x-icon" href="/favicon.png">
     <title>
-        Music - KOBE HAYES
+        Audio - KOBE HAYES
     </title>
 
 </head>
@@ -22,14 +22,14 @@
     </header>
 
 
-    <section class="main" id="music-main">
-        <h1 class="page-header" id="music-header"><span class="first-line">MUSIC</span>
-            <!-- <span class="last-line">BASED</span> -->
+    <section class="main" id="audio-main">
+        <h1 class="page-header" id="audio-header"><span class="first-line">AUDIO</span>
+
         </h1>
 
 
 
-        <span class="music-works" id="synthesis">
+        <span class="audio-works" id="synthesis">
             <h2 class="section-title">___Synthesis
             </h2>
             <!-- <p class="section-desc">I was fortunate to have access to a variety of rare vintage analog synthesizers
@@ -111,7 +111,7 @@
 
         </span>
 
-        <span class="music-works" id="recordings">
+        <span class="audio-works" id="recordings">
             <h2 class="section-title">___Recordings
             </h2>
             <span class="audio-works-container" id="silo">
@@ -190,11 +190,23 @@
 
         </span>
 
+        <section class="bottom-nav-buttons-container">
+            <button class="bottom-nav-buttons" id="audio-back">&lt; video</button>
+            <button class="bottom-nav-buttons" id="audio-next">typeface &gt;</button>
+
+        </section>
     </section>
     <!-- ------------------- -->
 
     <script src="script.js"></script>
     <script>
+
+        document.getElementById('audio-back').addEventListener('click', function () {
+            window.location.href = 'video.html';
+        });
+        document.getElementById('audio-next').addEventListener('click', function () {
+            window.location.href = 'typeface.html';
+        });
         generateNavBar();
 
     </script>

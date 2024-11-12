@@ -152,6 +152,12 @@
             <img class="graphic-design-img" id="port-ss" src="port-ss/portfolio-ss.png">
         </span>
     </section>
+
+    <section class="bottom-nav-buttons-container">
+        <button class="bottom-nav-buttons" id="graphicdesign-back">&lt; home</button>
+        <button class="bottom-nav-buttons" id="graphicdesign-next">photography &gt;</button>
+
+    </section>
     <!-- ------------------- -->
 
     <script src="script.js"></script>
@@ -264,6 +270,13 @@
         updateImage1();
         updateImage2();
         updateImage3();
+
+        document.getElementById('graphicdesign-back').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+        document.getElementById('graphicdesign-next').addEventListener('click', function () {
+            window.location.href = 'photography.html';
+        });
 
         generateNavBar();
 
